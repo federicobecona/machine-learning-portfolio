@@ -30,10 +30,9 @@ lda = lda.fit(X, Y)
 input_file2 = "sports_Scoring.csv"
 data_scoring = pd.read_csv(input_file, header=0)
 
-Xsco = data[['Edad','Fuerza','Velocidad','Lesiones','Vision','Resistencia','Agilidad','CapacidadDecision']].values
+Xsco = data_scoring[['Edad','Fuerza','Velocidad','Lesiones','Vision','Resistencia','Agilidad','CapacidadDecision']].values
 
 y_pred = lda.predict(Xsco)
  
 print("Predicted")
 print(y_pred)
-print()
