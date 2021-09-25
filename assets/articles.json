@@ -1,0 +1,39 @@
+[
+    
+    {
+        "unidad":"Casos",
+        "titulo":"Enfermedad Cardíaca",
+        "descripcion":"Esta TA consiste en...",
+        "contenido":"h1>>Visitar esta página ==p>> hola"
+    },
+    {
+        "unidad":"Casos",
+        "titulo":"Predicción de valores inmobiliarios",
+        "descripcion":"Esta TA consiste en...",
+        "contenido":"h1>>Visitar esta página ==p>> HELLO"
+    },
+    {
+        "unidad":"Casos",
+        "titulo":"Predicción de altura según restos óseos",
+        "descripcion":"Esta TA consiste en...",
+        "contenido":"h1>>Visitar esta página ==p>> chau "
+    },
+    {
+        "unidad":"CRISP-DM",
+        "titulo":"TA1",
+        "descripcion":"Esta TA consiste en...",
+        "contenido":"h1>>Visitar esta página ==p>> hola ==a>>hola>>https://google.com==hr==img>>prueba.jpg>>400>>400"
+    },
+    {
+        "unidad":"Algoritmos lineales",
+        "titulo":"PD2",
+        "descripcion":"Esta PD consiste en...",
+        "contenido":"h1>>Visitar esta página ==p>> hola"
+    },
+    {
+        "unidad":"Algoritmos no lineales",
+        "titulo":"TA2",
+        "descripcion":"Esta TA consiste en...",
+        "contenido":"h1>>Visitar esta página ==p>> hola"
+    }
+]
