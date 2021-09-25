@@ -1,0 +1,14 @@
+[
+    {
+        "titulo":"CRISP-DM",
+        "contenido":"TA1>>TA2>>TA3>>TA4>>TA5>>TA6"
+    },
+    {
+        "titulo":"Algoritmos lineales",
+        "contenido":"TA1>>TA2>>TA3>>TA4>>PD1>>PD2"
+    },
+    {
+        "titulo":"Algoritmos no lineales",
+        "contenido":"TA1>>TA2>>TA3"
+    }
+]

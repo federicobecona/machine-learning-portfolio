@@ -13,9 +13,12 @@ export class HomeComponent implements OnInit {
   }
 
   constructor(private router:Router){}
-  
-  goToPage(pageName:string):void{
-    this.router.navigate([`${pageName}`]);
+ 
+  goToMenu(paramName:string):void{
+    this.router.navigate(['menu', paramName]);
   }
 
+  goToBlog(paramName:string):void{
+    this.router.navigate(['blog', 'Casos', paramName]);
+  }
 }

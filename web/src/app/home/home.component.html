@@ -14,7 +14,7 @@
         <div class="carousel-caption text-start">
           <h1>Caso. Enfermedad Cardíaca</h1>
           <p>Descripción:</p>
-          <p><button class="btn btn-lg btn-primary" (click)="goToPage('blog')">Ver más</button></p>
+          <p><button class="btn btn-lg btn-primary" (click)="goToBlog('Enfermedad Cardíaca')">Ver más</button></p>
         </div>
       </div>
     </div>
@@ -25,7 +25,7 @@
         <div class="carousel-caption">
           <h1>Caso. Predicción de valores inmobiliarios</h1>
           <p>Descripción:</p>
-          <p><a class="btn btn-lg btn-primary" href="#">Ver más</a></p>
+          <p><a class="btn btn-lg btn-primary" (click)="goToBlog('Predicción de valores inmobiliarios')">Ver más</a></p>
         </div>
       </div>
     </div>
@@ -36,7 +36,7 @@
         <div class="carousel-caption text-end">
           <h1>Caso. Predicción de altura según restos óseos</h1>
           <p>Descripción:</p>
-          <p><a class="btn btn-lg btn-primary" href="#">Ver más</a></p>
+          <p><a class="btn btn-lg btn-primary"  (click)="goToBlog('Predicción de altura según restos óseos')">Ver más</a></p>
         </div>
       </div>
     </div>
@@ -61,17 +61,17 @@
     <div class="col-lg-4">
       <h2>CRISP-DM</h2>
       <p>Ejemplos que muestran preparación de datos</p>
-      <p><button class="btn btn-secondary" (click)="goToPage('menu')"> Ver más &raquo;</button></p>
+      <p><button class="btn btn-secondary" (click)="goToMenu('CRISP-DM')"> Ver más &raquo;</button></p>
     </div>
     <div class="col-lg-4">
       <h2>Algoritmos lineales</h2>
       <p>Ejercicios resueltos con regresión lineal, regresión logística y LDA</p>
-      <p><a class="btn btn-secondary" href="#"> Ver más &raquo; </a></p>
+      <p><a class="btn btn-secondary"  (click)="goToMenu('Algoritmos lineales')"> Ver más &raquo; </a></p>
     </div>
     <div class="col-lg-4">
       <h2>Algoritmos no lineales</h2>
       <p>Escenerios en los que se emplean árboles de clasificación y regresión, SVM, Naive Bayes, K-Nearest Neighbors y Feature Selection</p>
-      <p><a class="btn btn-secondary" href="#"> Ver más &raquo;</a></p>
+      <p><a class="btn btn-secondary"  (click)="goToMenu('Algoritmos no lineales')"> Ver más &raquo;</a></p>
     </div>
   </div>
 
