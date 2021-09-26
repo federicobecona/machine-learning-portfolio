@@ -12,8 +12,8 @@ export class AppComponent {
   
   constructor(private router:Router){}
 
-  goToPage(pageName:string):void{
-    this.router.navigate([`${pageName}`], );
+  goHome():void{
+    this.router.navigate(['']);
   }
 
 }

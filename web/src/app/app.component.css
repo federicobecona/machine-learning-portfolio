@@ -6,3 +6,7 @@
   white-space: nowrap;
   color: rgb(199, 199, 199);
 }
+
+#home{
+  cursor: pointer;
+}
