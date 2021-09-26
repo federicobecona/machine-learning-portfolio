@@ -13,37 +13,44 @@ export class MenuComponent implements OnInit {
 
   title = 'json-file-read-angular';
   
-  public MenusList:{titulo:string, contenido:string}[] = menus;
+  public MenusList:{titulo:string, descripcion:string, contenido:string}[] = menus;
 
 
   ngOnInit(): void {
     var i=0;
     let title;
+    let description;
     let content;
     var list;
     let routeParams = this.route.snapshot.paramMap;
     var menuName = routeParams.get('idMenu')
     let titleEle = document.getElementById("name")!;
+    let descriptionEle = document.getElementById("description")!;;
     let div = document.getElementById("menus")!;
     var router = this.router;
-    title = this.MenusList.find(obj => obj.titulo === menuName)?.titulo!;
-    content = this.MenusList.find(obj => obj.titulo === menuName)?.contenido!;
+    let menu = this.MenusList.find(obj => obj.titulo === menuName);
+    title = menu?.titulo!;
+    description = menu?.descripcion!;
+    content = menu?.contenido!;
     titleEle.innerText = title;
+    descriptionEle.innerText = description;
+
+
     list = content.split(">>").map(x => x.trim());
     while(i < list.length){
       let sub_div;
-      let title;
+      let taskTitle;
       let button;
       let blogName = list[i];
       sub_div = document.createElement('div');
       sub_div.setAttribute('class', "col-lg-4");
-      title = document.createElement('h2');
-      title.textContent = list[i];
+      taskTitle = document.createElement('h2');
+      taskTitle.textContent = list[i];
       button = document.createElement('button');
       button.textContent = "Ver más";
       button.setAttribute('class',"btn btn-primary");
       button.addEventListener("click", function(){router.navigate(["blog", menuName, blogName]);});
-      sub_div.appendChild(title);  
+      sub_div.appendChild(taskTitle);  
       sub_div.appendChild(button);
       div.appendChild(sub_div);
       i++;
