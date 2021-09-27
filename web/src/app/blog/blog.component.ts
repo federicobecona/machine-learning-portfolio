@@ -45,14 +45,22 @@ export class BlogComponent implements OnInit {
       switch(tags[0]){
         case "p":
         case "h1":
+        case "h2":
+        case "h3":
+        case "h4":
+        case "h5":
+        case "h6":
           ele.textContent = tags[1];
           break; 
+        case "code":
+          ele.textContent= tags[1].substring(1);;
+          break;
         case "a":
           ele.innerHTML = tags[1];
           ele.setAttribute('href', tags[2]);
           break;
         case "img":
-          ele.setAttribute('src',"assets/images/" +tags[1]);
+          ele.setAttribute('src',"assets/images/" + tags[1]);
           ele.setAttribute('width', tags[2]);
           ele.setAttribute('height', tags[3]);
           break;

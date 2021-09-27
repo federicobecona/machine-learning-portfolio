@@ -40,5 +40,3 @@ plt.scatter(dataset['fare'], dataset['survived'], s=10, c=dataset['survived'],cm
 plt.show()
 
 print("-----FEATURE ENGINEERING------")
-
-
