@@ -37,7 +37,7 @@ export class BlogComponent implements OnInit {
     content = this.ArticlesList.find(obj => obj.unidad === menuName && obj.titulo === taskName)?.contenido!;
     titleEle.innerText = menuName+", "+taskName;
     descriptionEle.innerText = description;
-    list = content.split("==");
+    list = content.split("=,=");
     while(i < list.length){ 
       let ele;
       tags = list[i].split(">>").map(x => x.trim());
@@ -53,11 +53,17 @@ export class BlogComponent implements OnInit {
           ele.textContent = tags[1];
           break; 
         case "code":
-          ele.textContent= tags[1].substring(1);;
+          ele.textContent= tags[1].substring(1);
+          ele.setAttribute('class', "python");
           break;
         case "a":
           ele.innerHTML = tags[1];
-          ele.setAttribute('href', tags[2]);
+          if(tags.length>2){
+            ele.setAttribute('download', tags[2])
+            ele.setAttribute('href', "assets/downloads/"+tags[2]);
+          }else{
+            ele.setAttribute('href', tags[2]);
+          }
           break;
         case "img":
           ele.setAttribute('src',"assets/images/" + tags[1]);
