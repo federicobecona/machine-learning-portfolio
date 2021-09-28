@@ -2,17 +2,17 @@
     {
         "titulo":"CRISP-DM",
         "descripcion":"Escenarios que muestran preparación de datos",
-        "contenido":"TA1>>TA2>>TA3>>PD1>>PD2>>PD3>>PD4"
+        "contenido":"PD1>>PD2>>PD3>>PD4"
     },
     {
         "titulo":"Algoritmos lineales",
         "descripcion":"Ejercicios con regresión lineal, regresión logística y LDA",
-        "contenido":"TA1>>TA2>>TA4>>TA6>>TA7>>PD1>>PD2>>PD3>>PD4>>PD5"
+        "contenido":"PD1>>PD2>>PD3>>PD4>>PD5"
     },
     {
         "titulo":"Algoritmos no lineales",
         "descripcion":"Ejemplos con árboles de clasificación-regresión y SVM",
-        "contenido":"TA2>>TA3>>PD1>>PD2"
+        "contenido":"PD1>>PD2"
     }
 ]
 
