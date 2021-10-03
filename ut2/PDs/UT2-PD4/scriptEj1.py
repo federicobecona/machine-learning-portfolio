@@ -8,7 +8,9 @@ dataset = pd.read_csv(input_file, header=0)
 print("-----DATASET------")
 print(dataset.to_string())
 
+print()
 print("-----MISSSING VALUES------")
+print("*Antes de data pre-procesing")
 print(pd.isnull(dataset).sum())
 
 #Se reemplazan los missing values de edad por la media
@@ -27,10 +29,12 @@ dataset.dropna(subset=['embarked'], how='all', inplace=True)
 dataset["boat"].fillna('U', inplace = True)
 dataset["home.dest"].fillna('U', inplace = True)
 
+print()
+print("*Despues de data pre-procesing")
 print(pd.isnull(dataset).sum())
 
-
-print("-----GRÁFICAS------")
+print()
+print("-----GRAFICAS------")
 print("- x = Age, y = Survived")
 print("- x = Fare, y = Survived")
 colors = ("red", "blue")
@@ -38,5 +42,3 @@ plt.scatter(dataset['age'], dataset['survived'], s=10, c=dataset['survived'],cma
 plt.show()
 plt.scatter(dataset['fare'], dataset['survived'], s=10, c=dataset['survived'],cmap=matplotlib.colors.ListedColormap(colors))
 plt.show()
-
-print("-----FEATURE ENGINEERING------")
