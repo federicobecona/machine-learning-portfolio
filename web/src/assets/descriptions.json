@@ -42,7 +42,7 @@
     {
         "unidad":"Algoritmos lineales",
         "tarea":"PD5",
-        "descripcion":"Utilizaremos Análisis de Discriminante Lineal (LDA) con Sckit-learn de Python para realizar la clasificación a partir de conjuntos de datos."
+        "descripcion":"Utilizaremos Análisis de Discriminante Lineal (LDA) con Sckit-learn de Python y RapidMiner para realizar la clasificación a partir del dataset de Sports para finalmente comparar los modelos."
     },
     {
         "unidad":"Algoritmos no lineales",
