@@ -2,8 +2,8 @@
     {
         "unidad":"CRISP-DM",
         "titulo":"PD1",
-        "descripcion":"En la siguiente práctica se realizaron tutoriales de RapidMiner para preparación de datos.",
-        "contenido":"h3>> Tutorial Handling Missing Values =,=img>>UT2-PD1-1.jpg>>1000>>200 =,=br=,=a>>Descargar archivo>>Tutorial Handling Missing Values.rmp>>d =,=br=,=br=,=h3>> Tutorial Normalization and Outlier detection =,=img>>UT2-PD1-2.jpg>>1200>>200=,=br=,=a>>Descargar archivo>>Tutorial Normalization and Outlier detection.rmp>>d"
+        "descripcion":"En la siguiente práctica se realizaron tutoriales de RapidMiner para preparación de datos y además se utilizó esta herramienta para trabajar sobre normalización con el dataset Wine.",
+        "contenido":"h2>>Ejercicio 1=,=br=,=h3>> Tutorial Handling Missing Values =,=img>>UT2-PD1-1.jpg>>1000>>200 =,=br=,=a>>Descargar archivo>>Tutorial Handling Missing Values.rmp>>d =,=br=,=br=,=h3>> Tutorial Normalization and Outlier detection =,=img>>UT2-PD1-2.jpg>>1200>>200=,=br=,=a>>Descargar archivo>>Tutorial Normalization and Outlier detection.rmp>>d=,=br=,=br=,=h2>>Ejercicio 2=,=br=,=h3>>Pasos=,=p>>- Se creó un proceso en RapidMiner con dos canales, uno que utiliza el dataset normalizado con transforamción Z y uno que no.=,=p>>- En ambos canales se realizó un split con 70% de datos para entrenamiento y 30% para test. =,=p>>- Para cada caso se entrenó un modelo de Naive Bayes para clasificación por lo cual hubo que convertir el atriburto Wine de numérico a polinómico.=,=p>>- Se le midió la performance del modelo.=,=br=,=h3>>Resultados=,=img>>UT2-PD1-3.jpg>>850>>450=,=br=,=a>>Descargar modelo>>UT2 PD1 ej2.rmp>>d=,=br=,=br=,=p>>Caso normalizado=,=img>>UT2-PD1-4.jpg>>1050>>200=,=p>>Caso sin normalizar=,=img>>UT2-PD1-5.jpg>>1050>>200=,=br=,=p>>Se obtuvo un poco de mayor presición para el caso del dataset sin normalizar lo cual se debe al algoritmo utilizado. Naive Bayes calcula frecuencias para hallar las clases de predicción y al estandarizar los datos, las frecuencias se mantienen de una forma similar."
     },
     {
         "unidad":"CRISP-DM",
