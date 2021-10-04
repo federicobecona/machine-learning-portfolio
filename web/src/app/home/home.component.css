@@ -106,3 +106,9 @@ body {
       font-size: 3.5rem;
     }
   }
+
+  .principal-images{
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+  }

@@ -78,6 +78,7 @@
    */
   .blog-post {
     margin-bottom: 4rem;
+    margin-top: 8%;
   }
   .blog-post-title {
     margin-bottom: .25rem;
@@ -111,7 +112,8 @@
   }
 
   .container{
-    margin-top: 70px;
+    margin-top: 8%px;
+    width: 66%;
   }
   
 

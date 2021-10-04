@@ -17,6 +17,11 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 100vh;
+  position: relative;
+  margin-top: 8%;
 }
 
+#menus {
+  inline-size: 400px;
+  overflow-wrap: break-word;
+}

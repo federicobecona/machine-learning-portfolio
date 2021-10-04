@@ -51,6 +51,7 @@ export class BlogComponent implements OnInit {
         case "h5":
         case "h6":
           ele.textContent = tags[1];
+          ele.setAttribute("align","justify");
           break; 
         case "code":
           ele.textContent= tags[1].substring(1);

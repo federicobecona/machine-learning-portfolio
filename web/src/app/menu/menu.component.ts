@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import menus from 'src/assets/menus.json';
+import descriptions from 'src/assets/descriptions.json';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 @Component({
@@ -14,14 +15,14 @@ export class MenuComponent implements OnInit {
   title = 'json-file-read-angular';
   
   public MenusList:{titulo:string, descripcion:string, contenido:string}[] = menus;
-
+  public DescripcionList:{unidad:string, tarea:string, descripcion:string}[] = descriptions;
 
   ngOnInit(): void {
     var i=0;
-    let title;
+    var title: string;
     let description;
     let content;
-    var list;
+    var list: string | any[];
     let routeParams = this.route.snapshot.paramMap;
     var menuName = routeParams.get('idMenu')
     let titleEle = document.getElementById("name")!;
@@ -34,25 +35,31 @@ export class MenuComponent implements OnInit {
     content = menu?.contenido!;
     titleEle.innerText = title;
     descriptionEle.innerText = description;
-
-
     list = content.split(">>").map(x => x.trim());
     while(i < list.length){
       let sub_div;
       let taskTitle;
       let button;
+      let br;
+      let taskDescription;
       let blogName = list[i];
       sub_div = document.createElement('div');
-      sub_div.setAttribute('class', "col-lg-4");
+      sub_div.setAttribute('class', "vertical-center");
       taskTitle = document.createElement('h2');
       taskTitle.textContent = list[i];
+      taskDescription = document.createElement('p');
+      taskDescription.textContent = this.DescripcionList.find(desc => desc.unidad==title && desc.tarea==list[i])?.descripcion!;
+      taskDescription.setAttribute('align',"justify");
       button = document.createElement('button');
       button.textContent = "Ver más";
       button.setAttribute('class',"btn btn-primary");
       button.addEventListener("click", function(){router.navigate(["blog", menuName, blogName]);});
-      sub_div.appendChild(taskTitle);  
+      br = document.createElement("br"); 
+      sub_div.appendChild(taskTitle); 
+      sub_div.appendChild(taskDescription);   
       sub_div.appendChild(button);
-      div.appendChild(sub_div);
+      div.appendChild(sub_div); 
+      div.appendChild(br);
       i++;
     }
   }
