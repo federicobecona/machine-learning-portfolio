@@ -2,22 +2,21 @@
     {
         "unidad":"CRISP-DM",
         "tarea":"PD1",
-        "descripcion":"En la siguiente práctica se realizaron tutoriales de RapidMiner para preparación de datos y además se utilizó esta herramienta para trabajar sobre normalización con el dataset Wine."
-    },
+        "descripcion":"En la siguiente práctica se realizaron tutoriales de RapidMiner para manejo de missing values, normalización y detección de outliers. Además utilizó esta herramienta para trabajar sobre normalización con el dataset Wine."    },
     {
         "unidad":"CRISP-DM",
         "tarea":"PD2",
-        "descripcion":"En este ejercicio se hicieron tutoriales de construcción de modelos para la herramienta RapidMiner."
+        "descripcion":"En este ejercicio se hicieron tutoriales de modelado, scoring, split y validación, cross validation y visual model comparison para la herramienta RapidMiner."
     },
     {
         "unidad":"CRISP-DM",
         "tarea":"PD3",
-        "descripcion":"Para este caso se aplican técnicas de pre procesamiento y obtención de estadísticas para el dataset Wine utiliando funciones de Python."
+        "descripcion":"Para este caso se aplican técnicas de pre procesamiento como normalización, estandarización y split en datos de entrenamiento y test. Luego se obtuvieron estadísticas para el dataset Wine utiliando funciones de Python con SciKitLearn y la librería Pandas."
     },
     {
         "unidad":"CRISP-DM",
         "tarea":"PD4",
-        "descripcion":"Construcción de un modelo de predicción para el dataset Titanic y de un programa que responda a consultas sobre el dataset mencionado."
+        "descripcion":"Remoción de missing values, construcción de un modelo de predicción para el dataset Titanic y creación de un programa que responda a consultas sobre el dataset mencionado."
     },
     {
         "unidad":"Algoritmos lineales",
@@ -42,7 +41,7 @@
     {
         "unidad":"Algoritmos lineales",
         "tarea":"PD5",
-        "descripcion":"Utilizaremos Análisis de Discriminante Lineal (LDA) con Sckit-learn de Python y RapidMiner para realizar la clasificación a partir del dataset de Sports para finalmente comparar los modelos."
+        "descripcion":"Utilizaremos Análisis de Discriminante Lineal (LDA) con Sckit-learn de Python y RapidMiner para entrenar y realizar la clasificación a partir del dataset de Sports para finalmente comparar las predicciones realizadas por ambos modelos."
     },
     {
         "unidad":"Algoritmos no lineales",
@@ -52,11 +51,6 @@
     {
         "unidad":"Algoritmos no lineales",
         "tarea":"PD2",
-        "descripcion":"Estudiaremos un modelo de árbol de decisión de regresión simple en KNIME."
-    },
-    {
-        "unidad":"Casos",
-        "tarea":"Titanic",
-        "descripcion":"Esta TA consiste en..."
+        "descripcion":"Estudiaremos la construcción de un modelo de árbol de decisión de regresión simple en la herramienta KNIME."
     }
 ]
