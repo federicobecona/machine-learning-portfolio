@@ -19,6 +19,6 @@ export class HomeComponent implements OnInit {
   }
 
   goToBlog(paramName:string):void{
-    this.router.navigate(['blog', 'Casos', paramName]);
+    this.router.navigate(['blog', 'Caso', paramName]);
   }
 }

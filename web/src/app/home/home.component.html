@@ -2,6 +2,7 @@
 
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>  
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
   </div>
   
   <div class="carousel-inner">
@@ -9,13 +10,24 @@
       <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#004675"/></svg>
       <div class="container">
         <div class="carousel-caption text-start">
-            <h1>Caso. Titanic</h1>
-            <p><button class="btn btn-lg btn-primary" (click)="goToBlog('Titanic')">Ver más</button></p>  
+            <h1>Caso. Deportes</h1>
+            <p>Utilizaremos Análisis de Discriminante Lineal (LDA) con Sckit-learn de Python y RapidMiner para entrenar y realizar la clasificación a partir del dataset de Sports para finalmente comparar las predicciones realizadas por ambos modelos.</p>
+            <p><button class="btn btn-lg btn-primary" (click)="goToBlog('Deportes')">Ver más</button></p>  
         </div>
       </div>
     </div>
-
+    <div class="carousel-item">
+      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#004675"/></svg>
+      <div class="container">
+        <div class="carousel-caption text-end">
+          <h1>Caso. Titanic</h1>
+          <p>Se realizará un análisis del problema y de los datos del dataset Titanic para a partir de este crear un modelo de regresión logística con la herramienta RapidMiner</p>
+            <p><button class="btn btn-lg btn-primary" (click)="goToBlog('Titanic')">Ver más</button></p> 
+        </div>
+      </div>
+    </div>
   </div>
+  
 
   <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
