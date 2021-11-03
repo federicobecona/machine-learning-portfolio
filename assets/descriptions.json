@@ -67,5 +67,10 @@
         "unidad":"Algoritmos no lineales",
         "tarea":"PD5",
         "descripcion":"Comparación de árboles de decisión entre RapidMiner y Weka aplicados al dataset Iris. Además se analiza este componente en Azure ML Studio, KNIME y Python Sci kit learn."
-    }
+    },
+    {
+        "unidad":"Algoritmos no lineales",
+        "tarea":"PD8",
+        "descripcion":"Empleo del algoritmo KNN para realizar predicciones en una hoja de cálculo y RapidMiner."
+    }        
 ]
