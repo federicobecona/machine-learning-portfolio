@@ -61,6 +61,6 @@
     {
         "unidad":"Algoritmos no lineales",
         "tarea":"PD4",
-        "descripcion":"En una hoja de cálculo analizaremos paso a paso el algoritmo de Support Vector Machines lineal con descenso de sub gradiente y lo utilizaremos para realizar predicciones."
+        "descripcion":"En este ejercicio se analizará el componente SVM de RapidMiner y se lo utilizará para resolver un problema no separable linealmente."
     }
 ]
