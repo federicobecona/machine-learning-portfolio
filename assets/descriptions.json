@@ -52,5 +52,10 @@
         "unidad":"Algoritmos no lineales",
         "tarea":"PD2",
         "descripcion":"Estudiaremos la construcción de un modelo de árbol de decisión de regresión simple en la herramienta KNIME."
+    },
+    {
+        "unidad":"Algoritmos no lineales",
+        "tarea":"PD3",
+        "descripcion":"En una hoja de cálculo analizaremos paso a paso el algoritmo de Support Vector Machines lineal con descenso de sub gradiente y lo utilizaremos para realizar predicciones."
     }
 ]
