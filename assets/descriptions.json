@@ -62,5 +62,10 @@
         "unidad":"Algoritmos no lineales",
         "tarea":"PD4",
         "descripcion":"En este ejercicio se analizará el componente SVM de RapidMiner y se lo utilizará para resolver un problema no separable linealmente."
+    },
+    {
+        "unidad":"Algoritmos no lineales",
+        "tarea":"PD5",
+        "descripcion":"Comparación de árboles de decisión entre RapidMiner y Weka aplicados al dataset Iris. Además se analiza este componente en Azure ML Studio, KNIME y Python Sci kit learn."
     }
 ]
