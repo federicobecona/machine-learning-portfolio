@@ -11,7 +11,7 @@
     },
     {
         "titulo":"Algoritmos no lineales",
-        "descripcion":"Ejemplos con árboles de clasificación-regresión, SVM lineal y no lineal",
+        "descripcion":"Ejemplos con árboles de clasificación-regresión, SVM lineal y no lineal, KNN",
         "contenido":"PD1>>PD2>>PD3>>PD4>>PD5>>PD6>>PD7>>PD8>>PD9"
     }
 ]
