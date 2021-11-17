@@ -7,7 +7,7 @@
   font-weight: 400;
 }
 
-.marketing .col-lg-4 p {
+.marketing.col-lg-4 p {
   margin-right: .75rem;
   margin-left: .75rem;
 }
@@ -22,6 +22,30 @@
 }
 
 #menus {
-  inline-size: 650px;
+  margin: auto;
+  width: 60%;
+  padding: 2px;
+  inline-size: 750px;
   overflow-wrap: break-word;
+
+}
+
+#descCont{
+  margin: auto;
+  width: 60%;
+  inline-size: 750px;
+  overflow-wrap: break-word;
+}
+
+
+h1{
+  color: white;
+}
+
+p{
+  color: white;
+}
+
+hr{
+  color: white;
 }

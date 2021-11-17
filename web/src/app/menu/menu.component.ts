@@ -34,6 +34,8 @@ export class MenuComponent implements OnInit {
     description = menu?.descripcion!;
     content = menu?.contenido!;
     titleEle.innerText = title;
+    titleEle.style.fontSize="40pt"
+    titleEle.style.marginBottom="20px"
     descriptionEle.innerText = description;
     list = content.split(">>").map(x => x.trim());
     while(i < list.length){
@@ -44,12 +46,17 @@ export class MenuComponent implements OnInit {
       let taskDescription;
       let blogName = list[i];
       sub_div = document.createElement('div');
-      sub_div.setAttribute('class', "vertical-center");
-      taskTitle = document.createElement('h2');
+      sub_div.setAttribute('class', "articulo");
+      sub_div.style.marginTop = "30px"
+      sub_div.style.padding = "20px"
+      sub_div.style.border = "solid #aeb8c2 thin"
+      taskTitle = document.createElement('h4');
       taskTitle.textContent = list[i];
+      taskTitle.style.color = "white";
       taskDescription = document.createElement('p');
+      taskDescription.style.color = "white";
       taskDescription.textContent = this.DescripcionList.find(desc => desc.unidad==title && desc.tarea==list[i])?.descripcion!;
-      taskDescription.setAttribute('align',"justify");
+      taskDescription.setAttribute('align',"center");
       button = document.createElement('button');
       button.textContent = "Ver más";
       button.setAttribute('class',"btn btn-primary");

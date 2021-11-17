@@ -10,10 +10,31 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'portfolio';
   
-  constructor(private router:Router){}
+  constructor(private router:Router){
+    this.router.routeReuseStrategy.shouldReuseRoute = function() {
+      return false;
+   };
+  }
+
+  ngOnInit(): void {
+    window.addEventListener("scroll", function(){
+    var header = document.querySelector("nav")!  
+    header.classList.toggle("sticky-navbar", window.scrollY > 0)
+})
+
+  }
 
   goHome():void{
     this.router.navigate(['']);
   }
 
+  goToMenu(paramName:string):void{
+    this.router.navigate(['menu', paramName]);
+  }
+
+  goToBlog(paramName:string):void{
+    this.router.navigate(['blog', 'Caso', paramName]);
+  }
+
+  
 }

@@ -2,7 +2,7 @@
 
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>  
-    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <!--<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>-->
   </div>
   
   <div class="carousel-inner">
@@ -10,25 +10,25 @@
       <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#004675"/></svg>
       <div class="container">
         <div class="carousel-caption text-start">
-          <h1>Caso. Titanic</h1>
-          <p>En este caso se hace un estudio de preparación de datos para el dataset Titanic y se crean modelos de regresión logística equivalentes para RapidMiner y SciKitLearn</p>
-            <p><button class="btn btn-lg btn-primary" (click)="goToBlog('Titanic')">Ver más</button></p>  
-          
+          <h1>Caso. Ames Housing</h1>
+          <br>
+          <p><button class="btn btn-lg btn-primary" (click)="goToBlog('Ames Housing')">Ver más</button></p> 
         </div>
       </div>
     </div>
+    <!--
     <div class="carousel-item">
       <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#004675"/></svg>
       <div class="container">
         <div class="carousel-caption text-end">
-          <h1>Caso. Deportes</h1>
-            <p>Utilizaremos Análisis de Discriminante Lineal (LDA) con Sckit-learn de Python y RapidMiner para entrenar y realizar la clasificación a partir del dataset de Sports para finalmente comparar las predicciones realizadas por ambos modelos.</p>
-            <p><button class="btn btn-lg btn-primary" (click)="goToBlog('Deportes')">Ver más</button></p>             
+          <h1>Caso. Enfermedad Cardíaca</h1>
+            <p>...</p>
+            <p><button class="btn btn-lg btn-primary" (click)="goToBlog('Enfermedad Cardíaca')">Ver más</button></p>             
         </div>
       </div>
     </div>
+    -->
   </div>
-  
 
   <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -38,28 +38,30 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
-
 </div>
 
 <div class="container marketing">
   <div class="row">
-    <div class="col-lg-4">
-      <h2>CRISP-DM</h2>
-      <p>Escenarios que muestran preparación de datos</p>
-      <p><button class="btn btn-primary" (click)="goToMenu('CRISP-DM')"> Ver más &raquo;</button></p>
+    <div class="col-lg-3">
+      <h2>Preparación de datos</h2>
+      <p class="menuText">Escenarios que muestran manejo de missing values, outliers, transformaciones y selección de atributos. </p>
+      <p class="menuText"><button class="btn btn-primary" (click)="goToMenu('Preparación de datos')"> Ver más &raquo;</button></p>
     </div>
-    <div class="col-lg-4">
+    <div class="col-lg-3">
       <h2>Algoritmos lineales</h2>
-      <p>Ejercicios con regresión lineal, regresión logística y LDA</p>
-      <p><a class="btn btn-primary"  (click)="goToMenu('Algoritmos lineales')"> Ver más &raquo; </a></p>
+      <p class="menuText">Ejercicios con regresión lineal, regresión logística y LDA.</p>
+      <p class="menuText"><a class="btn btn-primary"  (click)="goToMenu('Algoritmos lineales')"> Ver más &raquo; </a></p>
     </div>
-    <div class="col-lg-4">
+    <div class="col-lg-3">
       <h2>Algoritmos no lineales</h2>
-      <p>Ejemplos con árboles de clasificación-regresión</p>
-      <p><a class="btn btn-primary"  (click)="goToMenu('Algoritmos no lineales')"> Ver más &raquo;</a></p>
+      <p class="menuText">Problemas con Árboles de Decisión, Naive Bayes, SVM y KNN.</p>
+      <p class="menuText"><a class="btn btn-primary"  (click)="goToMenu('Algoritmos no lineales')"> Ver más &raquo;</a></p>
+    </div>
+    <div class="col-lg-3">
+      <h2>Clustering</h2>
+      <p class="menuText">Proyectos con métodos de clustering y Principal Component Analysis.</p>
+      <p class="menuText"><a class="btn btn-primary"  href="#"> Ver más &raquo;</a></p>
     </div>
   </div>
-
   <hr>
-
 </div>

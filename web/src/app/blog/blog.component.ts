@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import articles from 'src/assets/articles.json';
+import articles from '../../assets/articles.json';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-blog',
@@ -10,14 +11,12 @@ import { ActivatedRoute } from '@angular/router';
 
 export class BlogComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private router:Router, private route: ActivatedRoute){ }
 
   title = 'json-file-read-angular';
 
   public ArticlesList:{unidad:string, titulo:string, descripcion:string, contenido:string}[] = articles;
   
-  
-
   ngOnInit(): void {
     console.log(this.route.snapshot.params);
     var i=0;
@@ -27,15 +26,26 @@ export class BlogComponent implements OnInit {
     let list;
     let tags;
     let titleEle = document.getElementById("name")!;
+    let subEle = document.getElementById("sub")!;
     let descriptionEle = document.getElementById("description")!;
     let div = document.getElementById("post")!;
     let routeParams = this.route.snapshot.paramMap;
     let menuName = routeParams.get('idMenu');
     let taskName = routeParams.get('idBlog');
+    var router = this.router;
     title = this.ArticlesList.find(obj => obj.unidad === menuName && obj.titulo === taskName)?.titulo!;
     description = this.ArticlesList.find(obj => obj.unidad === menuName && obj.titulo === taskName)?.descripcion!;
     content = this.ArticlesList.find(obj => obj.unidad === menuName && obj.titulo === taskName)?.contenido!;
-    titleEle.innerText = menuName+", "+taskName;
+    if(menuName!="Caso"){
+      titleEle.innerText = menuName!;
+      titleEle.style.fontSize = "1.2em"
+      titleEle.style.color = "white"
+      titleEle.addEventListener("click", function(){router.navigate(["menu", menuName]);});
+    }
+    subEle.innerText = taskName!;
+    subEle.style.marginTop = "30px"
+    subEle.style.fontSize = "2.5rem"
+    subEle.style.color = "white"
     descriptionEle.innerText = description;
     list = content.split("=,=");
     while(i < list.length){ 
@@ -52,19 +62,28 @@ export class BlogComponent implements OnInit {
         case "h6":
           ele.textContent = tags[1];
           ele.setAttribute("align","justify");
+          ele.style.color = "white"
           break; 
         case "code":
           ele.textContent= tags[1].substring(1);
           ele.setAttribute('class', "python");
+          ele.style.color = "pink"
           break;
         case "a":
           ele.innerHTML = tags[1];
           if(tags.length>2){
             ele.setAttribute('download', tags[2])
             ele.setAttribute('href', "assets/downloads/"+tags[2]);
+            ele.style.color="skyblue"
           }else{
             ele.setAttribute('href', tags[2]);
           }
+          break;
+        case "hr":
+          ele.style.color = "white"
+          break
+        case "script":
+          ele.setAttribute('src', tags[1]);
           break;
         case "img":
           ele.setAttribute('src',"assets/images/" + tags[1]);

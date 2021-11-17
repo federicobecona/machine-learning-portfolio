@@ -1,8 +1,44 @@
 <header>
-  <nav id="navegador" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-      <a  id="home" class="navbar-brand" (click)="goHome()">Machine Learning Portfolio</a>
-      <a  href="https://www.linkedin.com/in/federicobecona/"><h2 class="mi-nombre" >Federico Becoña</h2></a>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div id="container" class="container-fluid">
+      <a class="navbar-brand" (click)="goHome()">Machine Learning Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <div class="dropdown">
+            <button id="dropdown" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Casos de estudio</button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" (click)="goToBlog('Ames Housing')">Ames Housing</a></li>
+              <!--
+              <li><a class="dropdown-item" (click)="goToBlog('Enfermedad cardíaca')">Enfermedad cardíaca</a></li>
+              -->
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button id="dropdown" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Ejercicios específicos</button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" (click)="goToMenu('Preparación de datos')">Preparación de datos</a></li>
+              <li><a class="dropdown-item" (click)="goToMenu('Algoritmos lineales')">Algoritmos lineales</a></li>
+              <li><a class="dropdown-item" (click)="goToMenu('Algoritmos no lineales')">Algoritmos no lineales</a></li>
+              <li><a class="dropdown-item" href="#">Clustering</a></li>
+            </ul>
+          </div>
+        </ul>
+        <form id="form-container" class="d-flex">
+          <p id="myname" class="navbar-brand">Federico Becoña</p>
+          <p id="pipe" class="navbar-brand">|</p>
+          <div>
+            <a href="https://www.linkedin.com/in/federicobecona" target="_blank">
+              <img src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/linkedin-icon-18-256.png" />
+            </a>
+            <a href="https://github.com/federicobecona" target="_blank">
+              <img src="https://icon-library.com/images/github-icon-white/github-icon-white-6.jpg"/>
+            </a>  
+          </div>
+        </form>
+      </div>
     </div>
   </nav>
 </header>

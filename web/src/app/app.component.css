@@ -1,16 +1,88 @@
-.mi-nombre {
-  padding-top: 0.65rem;
-  margin-right: 1rem;
-  font-size: 1.25rem;
-  text-decoration: none;
-  white-space: nowrap;
-  color: rgb(199, 199, 199);
-}
-
-#home{
+a:hover{
   cursor: pointer;
+  font-weight:500;
 }
 
-#navegador{
-  height: 6%;
+div.dropdown{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+button{
+  background-color:#212529;
+  padding: 2pt;
+  padding-left: 4pt;
+  padding-right: 4pt;
+}
+
+li{
+  background-color: #212529;
+  border-color: #212529;
+}
+
+a{
+  color: white;
+}
+
+ul{
+  padding: 0pt;
+  border: 0pt;
+}
+
+img{
+  margin-top: 4px;
+  margin-right: 4px;
+  width: 40px;
+  height: 40px;
+}
+
+img:hover{
+  opacity: 50%;
+}
+
+#pipe{
+  margin-right: 20px;
+  margin-left: 3px;
+  margin-top: 5px;
+}
+
+#form-container{
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 0px;
+}
+
+#myname{
+  margin-top: 12px;
+  padding: 0px;
+}
+
+#container{
+  padding-left: 20px;
+}
+
+nav{
+  padding: 0;
+  border-bottom: solid thin white;
+}
+
+nav.sticky-navbar{
+  padding: 0;
+  opacity: 0.9;
+}
+
+header{
+  width: auto;
+}
+
+div{
+  background-color: rgb(22, 25, 27);
+}
+
+.dropdown-menu{
+  border: solid thin white;
+}
+
+.dropdown-item{
+  border: solid thin white;
 }
