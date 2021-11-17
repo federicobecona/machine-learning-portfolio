@@ -1,18 +1,18 @@
 [
     {
-        "titulo":"CRISP-DM",
-        "descripcion":"Escenarios que muestran preparación de datos",
-        "contenido":"PD1>>PD2>>PD3>>PD4"
+        "titulo":"Preparación de datos",
+        "descripcion":"Escenarios que muestran manejo de missing values, outliers, transformaciones y selección de atributos.",
+        "contenido":"Normalización sobre dataset Wine en RapidMiner>>Tutoriales de preparación de datos en RapidMiner>>Pre procesamiento de datos con Python>>Data pre processing y cálculo de probabilidades de sucesos sobre el dataset Titanic con Python>>Selección de atributos para dataset Sonar"
     },
     {
         "titulo":"Algoritmos lineales",
-        "descripcion":"Ejercicios con regresión lineal, regresión logística y LDA",
-        "contenido":"PD1>>PD2>>PD3>>PD4>>PD5"
+        "descripcion":"Ejercicios con regresión lineal, regresión logística y LDA.",
+        "contenido":"Titanic>>Deportes>>Regresión lineal simple en hoja de cálculo>>Regresión logística en planilla electrónica>>LDA en hoja de cálculo"
     },
     {
         "titulo":"Algoritmos no lineales",
-        "descripcion":"Problemas con árboles de decisión, SVM, Naive Bayes, KNN y selección de atributos",
-        "contenido":"PD1>>PD2>>PD3>>PD4>>PD5>>PD6>>PD7>>PD8>>PD9"
+        "descripcion":"Problemas con Árboles de Decisión, Naive Bayes, SVM y KNN",
+        "contenido":"CART para clasificación binaria simple>>Árboles de decisión en KNIME>>Comparación de Decision Trees en herramientas de ML>>Naive Bayes en planilla electrónica>>SVM lineal con descenso de sub gradiente>>SVM no lineal en RapidMiner>>KNN en hoja de cálculo y RapidMiner"
     }
 ]
 
