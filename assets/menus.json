@@ -17,7 +17,7 @@
     {
         "titulo":"Clustering",
         "descripcion":"Proyectos con métodos de clustering y Principal Component Analysis.",
-        "contenido":"DBSCAN>>PCA"
+        "contenido":"DBSCAN en Wine>>PCA"
     }
 ]
 

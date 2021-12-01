@@ -93,5 +93,10 @@
         "unidad":"Algoritmos no lineales",
         "tarea":"KNN en hoja de cálculo y RapidMiner",
         "descripcion":"Empleo de KNN para realizar predicciones en una hoja de cálculo y RapidMiner."
+    },
+    {
+        "unidad":"Clustering",
+        "tarea":"DBSCAN en Wine",
+        "descripcion":"Aplicaremos el algoritmo de clustering DBSCAN para encontrar agrupaciones en el dataet Wine"
     }
 ]
