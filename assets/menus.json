@@ -11,8 +11,13 @@
     },
     {
         "titulo":"Algoritmos no lineales",
-        "descripcion":"Problemas con Árboles de Decisión, Naive Bayes, SVM y KNN",
+        "descripcion":"Problemas con Árboles de Decisión, Naive Bayes, SVM y KNN.",
         "contenido":"CART para clasificación binaria simple>>Árboles de decisión en KNIME>>Comparación de Decision Trees en herramientas de ML>>Naive Bayes en planilla electrónica>>SVM lineal con descenso de sub gradiente>>SVM no lineal en RapidMiner>>KNN en hoja de cálculo y RapidMiner"
+    },
+    {
+        "titulo":"Clustering",
+        "descripcion":"Proyectos con métodos de clustering y Principal Component Analysis.",
+        "contenido":"DBSCAN>>PCA"
     }
 ]
 
