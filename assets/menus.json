@@ -2,12 +2,12 @@
     {
         "titulo":"Preparación de datos",
         "descripcion":"Escenarios que muestran manejo de missing values, outliers, transformaciones y selección de atributos.",
-        "contenido":"Normalización sobre dataset Wine en RapidMiner>>Tutoriales de preparación de datos en RapidMiner>>Pre procesamiento de datos con Python>>Data pre processing y cálculo de probabilidades de sucesos sobre el dataset Titanic con Python>>Selección de atributos para dataset Sonar"
+        "contenido":"Pre procesamiento de datos en Wine con Python>>Data pre processing y cálculo de probabilidades de sucesos sobre el dataset Titanic con Python>>Normalización sobre dataset Wine en RapidMiner>>Selección de atributos para dataset Sonar>>Tutoriales de preparación de datos en RapidMiner"
     },
     {
         "titulo":"Algoritmos lineales",
         "descripcion":"Ejercicios con regresión lineal, regresión logística y LDA.",
-        "contenido":"Titanic>>Deportes>>Regresión lineal simple en hoja de cálculo>>Regresión logística en planilla electrónica>>LDA en hoja de cálculo"
+        "contenido":"Regresión lineal simple en hoja de cálculo>>Regresión logística en planilla electrónica>>LDA en hoja de cálculo>>Titanic>>Deportes"
     },
     {
         "titulo":"Algoritmos no lineales",
