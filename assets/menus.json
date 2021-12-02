@@ -15,9 +15,9 @@
         "contenido":"CART para clasificación binaria simple>>Árboles de decisión en KNIME>>Comparación de Decision Trees en herramientas de ML>>Naive Bayes en planilla electrónica>>SVM lineal con descenso de sub gradiente>>SVM no lineal en RapidMiner>>KNN en hoja de cálculo y RapidMiner"
     },
     {
-        "titulo":"Clustering",
+        "titulo":"No supervisado",
         "descripcion":"Proyectos con métodos de clustering y Principal Component Analysis.",
-        "contenido":"DBSCAN en Wine>>PCA"
+        "contenido":"DBSCAN en Wine>>PCA para dataset Cereals"
     }
 ]
 

@@ -95,8 +95,13 @@
         "descripcion":"Empleo de KNN para realizar predicciones en una hoja de cálculo y RapidMiner."
     },
     {
-        "unidad":"Clustering",
+        "unidad":"No supervisado",
         "tarea":"DBSCAN en Wine",
-        "descripcion":"Aplicaremos el algoritmo de clustering DBSCAN para encontrar agrupaciones en el dataet Wine"
+        "descripcion":"Aplicamos el algoritmo de clustering DBSCAN para encontrar agrupaciones en el dataet Wine"
+    },
+    {
+        "unidad":"No supervisado",
+        "tarea":"PCA para dataset Cereals",
+        "descripcion":"Estudio del algoritmo PCA utilizando los datos de Cereals"
     }
 ]
