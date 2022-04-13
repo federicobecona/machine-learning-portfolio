@@ -11,7 +11,7 @@
     },
     {
         "unidad":"Preparación de datos",
-        "tarea":"Pre procesamiento de datos con Python",
+        "tarea":"Pre procesamiento de datos en Wine con Python",
         "descripcion":"Para este caso se aplican técnicas de pre procesamiento como normalización, estandarización y split en datos de training y test. Luego se obtienen estadísticas para el dataset Wine utiliando funciones de Python con SciKitLearn y la librería Pandas."
     },
     {
@@ -93,5 +93,15 @@
         "unidad":"Algoritmos no lineales",
         "tarea":"KNN en hoja de cálculo y RapidMiner",
         "descripcion":"Empleo de KNN para realizar predicciones en una hoja de cálculo y RapidMiner."
+    },
+    {
+        "unidad":"No supervisado",
+        "tarea":"DBSCAN en Wine",
+        "descripcion":"Aplicamos el algoritmo de clustering DBSCAN para encontrar agrupaciones en el dataet Wine"
+    },
+    {
+        "unidad":"No supervisado",
+        "tarea":"PCA para dataset Cereals",
+        "descripcion":"Estudio del algoritmo PCA utilizando los datos de Cereals"
     }
 ]
