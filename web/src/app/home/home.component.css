@@ -17,6 +17,35 @@
   background-size: cover;
 }
 
+
+@media (min-width: 991px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+  .mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .mobile {
+    display: block;
+  }
+  p.menuText{
+    font-size: medium;
+    margin-bottom: 5px;
+  }
+  h4{
+    font-size: large;
+  }
+  hr{
+    margin: 5px;
+  }
+  #myCarousel{
+    margin: 5px;
+  }
+}
+
 .carousel-control-prev-icon{
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   border-radius: 50px;
@@ -142,12 +171,6 @@ body {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
-  }
-
-  @media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-      font-size: 3.5rem;
-    }
   }
 
   .principal-images{

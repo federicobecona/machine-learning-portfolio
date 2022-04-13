@@ -36,7 +36,7 @@ export class MenuComponent implements OnInit {
     titleEle.innerText = title;
     titleEle.style.fontSize="30pt"
     titleEle.style.color = "white"
-    titleEle.style.marginBottom="20px"
+    titleEle.style.marginBottom="10px"
     descriptionEle.innerText = description;
     list = content.split(">>").map(x => x.trim());
     while(i < list.length){
@@ -48,8 +48,9 @@ export class MenuComponent implements OnInit {
       let blogName = list[i];
       sub_div = document.createElement('div');
       sub_div.setAttribute('class', "articulo");
-      sub_div.style.marginTop = "30px"
-      sub_div.style.padding = "20px"
+      sub_div.style.marginTop = "15px"
+      sub_div.style.marginBottom = "15px"
+      sub_div.style.padding = "18px"
       sub_div.style.border = "solid #aeb8c2 thin"
       taskTitle = document.createElement('h4');
       taskTitle.textContent = list[i];
@@ -62,12 +63,10 @@ export class MenuComponent implements OnInit {
       button.textContent = "Ver más";
       button.setAttribute('class',"btn btn-primary");
       button.addEventListener("click", function(){router.navigate(["blog", menuName, blogName]);});
-      br = document.createElement("br"); 
       sub_div.appendChild(taskTitle); 
       sub_div.appendChild(taskDescription);   
       sub_div.appendChild(button);
       div.appendChild(sub_div); 
-      div.appendChild(br);
       i++;
     }
   }

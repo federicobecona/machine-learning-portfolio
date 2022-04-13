@@ -122,15 +122,26 @@ a:hover{
   width: 75%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1079px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 1079px) {
   .container{
+    width:85%;
+    margin-top: 15%;
+  }
+}
+
+@media (max-width: 765px){
+  .container{
+    width:95%;
     margin-top: 20%;
+  }
+  hr{
+    margin: 0px;
   }
 }
 

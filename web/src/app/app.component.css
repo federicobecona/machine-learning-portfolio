@@ -115,6 +115,7 @@ div{
     display: none;
   }
 }
+
 @media (max-width: 900px) {
   #title2 {
     display: block;
@@ -126,5 +127,8 @@ div{
 @media (max-width: 767px) {
   #navbarCollapse{
     padding-top: 15px;
+  }
+  #container{
+    padding-bottom: 7px;
   }
 }
