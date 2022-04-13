@@ -1,34 +1,37 @@
 <header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div id="container" class="container-fluid">
-      <a class="navbar-brand" (click)="goHome()">Machine Learning Portfolio</a>
+      <div id="row">
+        <a class="navbar-brand block" (click)="goHome()">Machine Learning Portfolio</a>
+        <div class="dropdown block">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Casos</button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" (click)="goToBlog('Ames Housing')">Ames Housing</a></li>
+            <li><a class="dropdown-item" (click)="goToBlog('Enfermedad Cardíaca')">Enfermedad Cardíaca</a></li> 
+            <li><a class="dropdown-item" (click)="goToBlog('Customer Segmentation')">Customer Segmentation</a></li> 
+          </ul>
+        </div>
+        <div class="dropdown block">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Ejercicios</button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" (click)="goToMenu('Preparación de datos')">Preparación de datos</a></li>
+            <li><a class="dropdown-item" (click)="goToMenu('Algoritmos lineales')">Algoritmos lineales</a></li>
+            <li><a class="dropdown-item" (click)="goToMenu('Algoritmos no lineales')">Algoritmos no lineales</a></li>
+            <li><a class="dropdown-item" (click)="goToMenu('No supervisado')">No supervisado</a></li>
+            <li><a class="dropdown-item" (click)="goToBlog('Ensambles')">Ensambles</a></li>
+          </ul>
+        </div>
+    </div>
+    
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <div class="dropdown">
-            <button id="dropdown" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Casos de estudio</button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" (click)="goToBlog('Ames Housing')">Ames Housing</a></li>
-              <li><a class="dropdown-item" (click)="goToBlog('Enfermedad Cardíaca')">Enfermedad Cardíaca</a></li> 
-              <li><a class="dropdown-item" (click)="goToBlog('Customer Segmentation')">Customer Segmentation</a></li> 
-            </ul>
-          </div>
-          <div class="dropdown">
-            <button id="dropdown" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Ejercicios específicos</button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" (click)="goToMenu('Preparación de datos')">Preparación de datos</a></li>
-              <li><a class="dropdown-item" (click)="goToMenu('Algoritmos lineales')">Algoritmos lineales</a></li>
-              <li><a class="dropdown-item" (click)="goToMenu('Algoritmos no lineales')">Algoritmos no lineales</a></li>
-              <li><a class="dropdown-item" (click)="goToMenu('Algoritmos no lineales')">No supervisado</a></li>
-              <li><a class="dropdown-item" (click)="goToBlog('Ensambles')">Ensambles</a></li>
-            </ul>
-          </div>
-        </ul>
+
+
+      <div class="collapse navbar-collapse  " id="navbarCollapse">
         <form id="form-container" class="d-flex">
-          <p id="myname" class="navbar-brand">Federico Becoña</p>
           <p id="pipe" class="navbar-brand">|</p>
+          <p id="myname" class="navbar-brand">Federico Becoña</p>
           <div>
             <a href="https://www.linkedin.com/in/federicobecona" target="_blank">
               <img src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/linkedin-icon-18-256.png" />

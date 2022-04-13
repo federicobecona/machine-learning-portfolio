@@ -43,7 +43,6 @@ export class BlogComponent implements OnInit {
       titleEle.addEventListener("click", function(){router.navigate(["menu", menuName]);});
     }
     subEle.innerText = taskName!;
-    subEle.style.marginTop = "30px"
     subEle.style.fontSize = "2.5rem"
     subEle.style.color = "white"
     descriptionEle.innerText = description;
@@ -95,7 +94,7 @@ export class BlogComponent implements OnInit {
           ele.setAttribute('width', tags[2]);
           ele.setAttribute('height', tags[3]);
           break;
-      }
+      } 
       div.appendChild(ele);  
       i++;
     }

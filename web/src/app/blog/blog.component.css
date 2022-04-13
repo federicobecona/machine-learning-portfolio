@@ -83,7 +83,7 @@ a:hover{
   */
 .blog-post {
   margin-bottom: 4rem;
-  margin-top: 12%;
+  margin-top: 5%;
 }
 
 .blog-post-title {
@@ -118,14 +118,18 @@ a:hover{
 }
 
 .container{
-  margin-top: 8%px;
-  width: 66%;
+  width: 75%;
 }
-
 
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container{
+    width: 75%;
   }
 }
 
