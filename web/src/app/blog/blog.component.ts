@@ -76,14 +76,19 @@ export class BlogComponent implements OnInit {
             ele.setAttribute('href', "assets/downloads/"+tags[2]);
             ele.style.color="skyblue"
           }else{
-            ele.setAttribute('href', tags[2]);
+            ele.setAttribute('href', tags[2])
           }
           break;
         case "hr":
           ele.style.color = "white"
           break
         case "script":
-          ele.setAttribute('src', tags[1]);
+          ele.setAttribute('src', tags[1])
+          break;
+        case "iframe":
+          ele.setAttribute('src', "data:text/html;charset=utf-8,<head><base target='_blank'/></head><body><script src='https://gist.github.com/federicobecona/95ce34e328222ae483fb8d5025ea95a8.js'></script></body>")
+          ele.setAttribute('width', tags[1])
+          ele.setAttribute('height', tags[2])
           break;
         case "img":
           ele.setAttribute('src',"assets/images/" + tags[1]);
