@@ -34,7 +34,8 @@ export class MenuComponent implements OnInit {
     description = menu?.descripcion!;
     content = menu?.contenido!;
     titleEle.innerText = title;
-    titleEle.style.fontSize="40pt"
+    titleEle.style.fontSize="30pt"
+    titleEle.style.color = "white"
     titleEle.style.marginBottom="20px"
     descriptionEle.innerText = description;
     list = content.split(">>").map(x => x.trim());

@@ -54,6 +54,10 @@ export class BlogComponent implements OnInit {
       ele = document.createElement(tags[0]);
       switch(tags[0]){
         case "p":
+          ele.setAttribute("align","justify");
+          ele.textContent = tags[1];
+          ele.style.color = "white"
+          break; 
         case "h1":
         case "h2":
         case "h3":
@@ -61,7 +65,6 @@ export class BlogComponent implements OnInit {
         case "h5":
         case "h6":
           ele.textContent = tags[1];
-          ele.setAttribute("align","justify");
           ele.style.color = "white"
           break; 
         case "code":

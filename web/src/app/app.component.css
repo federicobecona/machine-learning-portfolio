@@ -30,7 +30,7 @@ ul{
 }
 
 img{
-  margin-top: 9px;
+  margin-top: 12px;
   margin-right: 2px;
   width: 30px;
   height: 30px;
@@ -47,6 +47,11 @@ img:hover{
 #form-container{
   justify-content: center;
   margin-top: 10px;
+}
+
+.lang{
+  margin-top: -10px;
+  text-decoration: underline;
 }
 
 #myname{
@@ -102,19 +107,24 @@ div{
   justify-content: right;
 }
 
-@media (min-width: 500px) {
-  #title {
+@media (min-width: 900px) {
+  #title, #pipe{
     display: block;
   }
   #title2 {
     display: none;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 900px) {
   #title2 {
     display: block;
   }
-  #title {
+  #title, #pipe{
     display: none;
+  }
+}
+@media (max-width: 767px) {
+  #navbarCollapse{
+    padding-top: 15px;
   }
 }
