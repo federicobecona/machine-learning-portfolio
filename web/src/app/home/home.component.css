@@ -2,6 +2,33 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
+#bg1{
+  background-image: url(../../assets/images/ames-0.jpg);
+  background-size: cover;
+}
+
+#bg2{
+  background-image: url(../../assets/images/cardiaca-0.jpg);
+  background-size: cover;
+}
+
+#bg3{
+  background-image: url(../../assets/images/customer-seg-0.jpg);
+  background-size: cover;
+}
+
+.carousel-control-prev-icon{
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  border-radius: 50px;
+  background: black;
+}
+
+.carousel-control-next-icon{
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  border-radius: 50px;
+  background: black;
+}
+
 body {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -72,8 +99,19 @@ body {
   }
   
   h1{
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
     font-weight: 800;
   }
+
+  h4{
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    font-weight: 800;
+  }
+
+  button{ 
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  }
+  
   /* RESPONSIVE CSS
   -------------------------------------------------- */
   
