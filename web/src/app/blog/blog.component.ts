@@ -45,6 +45,7 @@ export class BlogComponent implements OnInit {
     subEle.innerText = taskName!;
     subEle.style.fontSize = "2.5rem"
     subEle.style.color = "white"
+    subEle.style.marginTop = "1.5rem"
     descriptionEle.innerText = description;
     list = content.split("=,=");
     while(i < list.length){ 

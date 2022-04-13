@@ -5,8 +5,7 @@ a:hover{
 
 div.dropdown{
   margin-top: 5px;
-  margin-right: 3px;
-  margin-left: 3px;
+  margin-right: 15px;
 }
 
 button{
@@ -32,7 +31,7 @@ ul{
 
 img{
   margin-top: 9px;
-  margin-right: 4px;
+  margin-right: 2px;
   width: 30px;
   height: 30px;
 }
@@ -56,6 +55,8 @@ img:hover{
 
 #container{
   padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 nav{
@@ -63,10 +64,10 @@ nav{
   border-bottom: solid thin white;
   position: relative;
   position: fixed;
+  padding: 0ch;
 }
 
 nav.sticky-navbar{
-  padding: 0;
   opacity: 0.9;
 }
 
