@@ -45,7 +45,7 @@ body {
     text-align: center;
   }
   .marketing h2 {
-    font-weight: 400;
+    font-weight: 700;
   }
   /* rtl:begin:ignore */
   .marketing .col-lg-4 p {
@@ -71,7 +71,9 @@ body {
     letter-spacing: -.05rem;
   }
   
-  
+  h1{
+    font-weight: 800;
+  }
   /* RESPONSIVE CSS
   -------------------------------------------------- */
   
@@ -116,17 +118,13 @@ body {
 
   h2{
     text-align: center;
+    color: white;
   }
 
   p.menuText{
     text-align: center;
   }
 
-
-  h2{
-    color: white;
-  }
-  
   p{
     color: white;
   }
