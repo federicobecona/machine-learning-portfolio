@@ -65,6 +65,7 @@ nav{
   width: 100%;
   border-bottom: solid thin white;
   position: relative;
+  position: fixed;
 }
 
 nav.sticky-navbar{
@@ -103,7 +104,18 @@ div{
   justify-content: right;
 }
 
+@media (min-width: 500px) {
+  #title {
+    display: block;
+  }
+  #title2 {
+    display: none;
+  }
+}
 @media (max-width: 500px) {
+  #title2 {
+    display: block;
+  }
   #title {
     display: none;
   }

@@ -92,7 +92,7 @@ export class BlogComponent implements OnInit {
         case "img":
           ele.setAttribute('src',"assets/images/" + tags[1]);
           ele.setAttribute('width', tags[2]);
-          ele.setAttribute('height', tags[3]);
+          ele.setAttribute('height', 'auto');
           break;
       } 
       div.appendChild(ele);  

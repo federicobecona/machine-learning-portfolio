@@ -118,6 +118,7 @@ a:hover{
 }
 
 .container{
+  margin-top: 8%;
   width: 75%;
 }
 
@@ -127,9 +128,9 @@ a:hover{
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 450px) {
   .container{
-    width: 75%;
+    margin-top: 20%;
   }
 }
 
