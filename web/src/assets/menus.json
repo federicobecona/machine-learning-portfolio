@@ -6,12 +6,12 @@
     },
     {
         "titulo":"Algoritmos lineales",
-        "descripcion":"Ejercicios con regresión lineal, regresión logística y linear discriminant analysis.",
+        "descripcion":"Ejercicios con Regresión Lineal, Regresión Logística y Linear Discriminant Analysis.",
         "contenido":"Regresión lineal simple en hoja de cálculo>>Regresión logística en planilla electrónica>>LDA en hoja de cálculo>>Titanic>>Deportes"
     },
     {
         "titulo":"Algoritmos no lineales",
-        "descripcion":"Problemas con Árboles de Decisión, Naive Bayes, SVM y KNN.",
+        "descripcion":"Problemas con Árboles de Decisión, Naive Bayes, Support Vector Machines y K-Nearest Neighbors.",
         "contenido":"CART para clasificación binaria simple>>Árboles de decisión en KNIME>>Comparación de Decision Trees en herramientas de ML>>Naive Bayes en planilla electrónica>>SVM lineal con descenso de sub gradiente>>SVM no lineal en RapidMiner>>KNN en hoja de cálculo y RapidMiner"
     },
     {

@@ -34,16 +34,25 @@ export class MenuComponent implements OnInit {
     description = menu?.descripcion!;
     content = menu?.contenido!;
     titleEle.innerText = title;
-    titleEle.style.fontSize="30pt"
     titleEle.style.color = "white"
     titleEle.style.marginBottom="10px"
+    titleEle.style.fontWeight = "700"
+    if (window.matchMedia("(min-width: 768px)").matches){
+      titleEle.style.fontSize = "xxx-large"
+    }else{
+      titleEle.style.fontSize = "xx-large"
+    }
     descriptionEle.innerText = description;
+    if (window.matchMedia("(min-width: 768px)").matches){
+      descriptionEle.style.fontSize = "medium"
+    }else{
+      descriptionEle.style.fontSize = "small"
+    }
     list = content.split(">>").map(x => x.trim());
     while(i < list.length){
       let sub_div;
       let taskTitle;
       let button;
-      let br;
       let taskDescription;
       let blogName = list[i];
       sub_div = document.createElement('div');
@@ -51,14 +60,24 @@ export class MenuComponent implements OnInit {
       sub_div.style.marginTop = "15px"
       sub_div.style.marginBottom = "15px"
       sub_div.style.padding = "18px"
-      sub_div.style.border = "solid #aeb8c2 thin"
+      sub_div.style.border = "solid rgba(255, 255, 255, .25) thin"
       taskTitle = document.createElement('h4');
       taskTitle.textContent = list[i];
       taskTitle.style.color = "white";
+      if (window.matchMedia("(min-width: 768px)").matches){
+        taskTitle.style.fontSize = "large"
+      }else{
+        taskTitle
+      }
       taskDescription = document.createElement('p');
       taskDescription.style.color = "white";
       taskDescription.textContent = this.DescripcionList.find(desc => desc.unidad==title && desc.tarea==list[i])?.descripcion!;
       taskDescription.setAttribute('align',"center");
+      if (window.matchMedia("(min-width: 768px)").matches){
+        taskDescription.style.fontSize = "medium"
+      }else{
+        taskDescription.style.fontSize = "small"
+      }
       button = document.createElement('button');
       button.textContent = "Ver más";
       button.setAttribute('class',"btn btn-primary");

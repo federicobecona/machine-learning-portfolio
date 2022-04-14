@@ -118,27 +118,29 @@ a:hover{
 }
 
 .container{
-  margin-top: 8%;
-  width: 75%;
+  margin-top: 6%;
 }
 
-@media (min-width: 1079px) {
+@media (min-width: 1279) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
   }
-}
-
-@media (max-width: 1079px) {
   .container{
-    width:85%;
-    margin-top: 15%;
+    width: 75%;
   }
 }
 
-@media (max-width: 765px){
+@media (max-width: 1279px) {
+  .container{
+    width:85%;
+    margin-top: 10%;
+  }
+}
+
+@media (max-width: 840px){
   .container{
     width:95%;
-    margin-top: 20%;
+    margin-top: 15%;
   }
 }
 

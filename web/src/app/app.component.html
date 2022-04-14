@@ -1,11 +1,11 @@
 <header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div id="container" class="container-fluid">
+    <div class="container-fluid">
       <div id="row">
         <a id="title" class="navbar-brand block" (click)="goHome()">Machine Learning Portfolio</a>
         <a id="title2" class="navbar-brand block" (click)="goHome()">Inicio</a>
         <div class="dropdown block">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Casos</button>
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Casos</button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             <li><a class="dropdown-item" (click)="goToBlog('Bienes raíces en Ames Iowa')">Bienes raíces en Ames Iowa</a></li>
             <li><a class="dropdown-item" (click)="goToBlog('Enfermedad Cardíaca')">Enfermedad Cardíaca</a></li> 
@@ -13,7 +13,7 @@
           </ul>
         </div>
         <div class="dropdown block">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Ejercicios</button>
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Ejercicios</button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             <li><a class="dropdown-item" (click)="goToMenu('Preparación de datos')">Preparación de datos</a></li>
             <li><a class="dropdown-item" (click)="goToMenu('Algoritmos lineales')">Algoritmos lineales</a></li>

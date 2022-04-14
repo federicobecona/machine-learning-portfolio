@@ -32,7 +32,7 @@
     display: block;
   }
   p.menuText{
-    font-size: medium;
+    font-size: small;
     margin-bottom: 5px;
   }
   h4{
@@ -44,6 +44,10 @@
   #myCarousel{
     margin: 5px;
   }
+}
+
+.row{
+  max-width: 100%;
 }
 
 .carousel-control-prev-icon{

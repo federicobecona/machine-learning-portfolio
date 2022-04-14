@@ -38,15 +38,29 @@ export class BlogComponent implements OnInit {
     content = this.ArticlesList.find(obj => obj.unidad === menuName && obj.titulo === taskName)?.contenido!;
     if(menuName!="Caso"){
       titleEle.innerText = menuName!;
-      titleEle.style.fontSize = "1.2em"
+      if (window.matchMedia("(min-width: 768px)").matches){
+        titleEle.style.fontSize = "medium"
+      }else{
+        titleEle.style.fontSize = "small"
+      }
       titleEle.style.color = "white"
       titleEle.addEventListener("click", function(){router.navigate(["menu", menuName]);});
     }
     subEle.innerText = taskName!;
-    subEle.style.fontSize = "2.5rem"
     subEle.style.color = "white"
-    subEle.style.marginTop = "1.5rem"
+    subEle.style.marginTop = "1rem"
+    subEle.style.fontWeight = "700"
+    if (window.matchMedia("(min-width: 768px)").matches){
+      subEle.style.fontSize = "xxx-large"
+    }else{
+      subEle.style.fontSize = "x-large"
+    }
     descriptionEle.innerText = description;
+    if (window.matchMedia("(min-width: 768px)").matches){
+      descriptionEle.style.fontSize = "medium"
+    }else{
+      descriptionEle.style.fontSize = "small"
+    }
     list = content.split("=,=");
     while(i < list.length){ 
       let ele;
@@ -57,6 +71,11 @@ export class BlogComponent implements OnInit {
           ele.setAttribute("align","justify");
           ele.textContent = tags[1];
           ele.style.color = "white"
+          if (window.matchMedia("(min-width: 768px)").matches){
+            ele.style.fontSize = "medium"
+          }else{
+            ele.style.fontSize = "small"
+          }
           break; 
         case "h1":
         case "h2":
@@ -71,6 +90,11 @@ export class BlogComponent implements OnInit {
           ele.textContent= tags[1].substring(1);
           ele.setAttribute('class', "python");
           ele.style.color = "pink"
+          if (window.matchMedia("(min-width: 768px)").matches){
+            ele.style.fontSize = "medium"
+          }else{
+            ele.style.fontSize = "x-small"
+          }
           break;
         case "a":
           ele.innerHTML = tags[1];
@@ -80,6 +104,11 @@ export class BlogComponent implements OnInit {
             ele.style.color="skyblue"
           }else{
             ele.setAttribute('href', tags[2])
+          }
+          if (window.matchMedia("(min-width: 768px)").matches){
+            ele.style.fontSize = "medium"
+          }else{
+            ele.style.fontSize = "small"
           }
           break;
         case "hr":
