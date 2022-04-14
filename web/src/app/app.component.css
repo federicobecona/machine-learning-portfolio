@@ -30,7 +30,7 @@ ul{
 }
 
 img{
-  margin-top: 12px;
+  margin-top: 17px;
   margin-right: 2px;
   width: 30px;
   height: 30px;
@@ -41,21 +41,20 @@ img:hover{
 }
 
 #pipe{
-  margin-top: 5px;
+  margin-top: 11px;
 }
 
 #form-container{
   justify-content: center;
-  margin-top: 10px;
 }
 
 .lang{
-  margin-top: -10px;
+  margin-top: -5px;
   text-decoration: underline;
 }
 
 #myname{
-  margin-top: 5px;
+  margin-top: 11px;
 }
 
 #container{
@@ -91,11 +90,11 @@ div{
 }
 
 .dropdown-menu{
-  border: solid thin white;
+  border: solid thin rgb(255, 255, 255, .25);
 }
 
 .dropdown-item{
-  border: solid thin white;
+  border: solid thin rgb(255, 255, 255, .25)  ;
 }
 
 #row{
@@ -118,13 +117,13 @@ div{
   #title, #pipe{
     display: block;
   }
-  #title2 {
+  #title2, .separator{
     display: none;
   }
 }
 
 @media (max-width: 900px) {
-  #title2 {
+  #title2, .separator{
     display: block;
   }
   #title, #pipe{
@@ -139,6 +138,12 @@ div{
     padding-top: 7px;
     padding-bottom: 7px;
   }
+  #myname{
+    margin-top: -5px;
+  }
+  img{
+    margin-top: 0px;
+  }
 }
 
 .navbar-toggler{
@@ -152,4 +157,15 @@ div{
 
 #title{
   margin-right: 8%;
+}
+
+.separator{
+  color: white;
+  opacity: 0.25;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+#navbarCollapse {
+  padding: 0%;
 }
