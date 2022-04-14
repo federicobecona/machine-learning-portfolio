@@ -1,22 +1,29 @@
 [
     {
         "titulo":"Preparación de datos",
-        "descripcion":"Estudio de missing values, outliers, transformaciones, selección de atributos, etc.",
+        "title":"Data preparation",
+        "descripcion":"Proyectos con missing values, outliers, transformaciones, selección de atributos, etc.",
+        "description":"Projects with missing values, outliers, transformations, attribute selection, etc.",
         "contenido":"Pre procesamiento de datos en Wine con Python>>Data pre processing y cálculo de probabilidades de sucesos sobre el dataset Titanic con Python>>Normalización sobre dataset Wine en RapidMiner>>Selección de atributos para dataset Sonar>>Tutoriales de preparación de datos en RapidMiner"
     },
     {
         "titulo":"Algoritmos lineales",
+        "title":"Linear algorithms",
         "descripcion":"Ejercicios con Regresión Lineal, Regresión Logística y Linear Discriminant Analysis.",
+        "description":"Exercises with Linear Regression, Logistic Regression and Linear Discriminant Analysis.",
         "contenido":"Regresión lineal simple en hoja de cálculo>>Regresión logística en planilla electrónica>>LDA en hoja de cálculo>>Titanic>>Deportes"
     },
     {
         "titulo":"Algoritmos no lineales",
+        "title":"Non linear algorithms",
         "descripcion":"Problemas con Árboles de Decisión, Naive Bayes, Support Vector Machines y K-Nearest Neighbors.",
+        "description":"Problems with Decision Trees, Naive Bayes, Support Vector Machines and K-Nearest Neighbors.",
         "contenido":"CART para clasificación binaria simple>>Árboles de decisión en KNIME>>Comparación de Decision Trees en herramientas de ML>>Naive Bayes en planilla electrónica>>SVM lineal con descenso de sub gradiente>>SVM no lineal en RapidMiner>>KNN en hoja de cálculo y RapidMiner"
     },
     {
         "titulo":"No supervisado",
-        "descripcion":"Proyectos con métodos de clustering y Principal Component Analysis.",
+        "title":"Unsupervised",
+        "descripcion":"Studies with clustering methods and Principal Component Analysis.",
         "contenido":"DBSCAN en Wine>>PCA para dataset Cereals"
     }
 ]

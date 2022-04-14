@@ -3,23 +3,23 @@
     <div class="container-fluid">
       <div id="row">
         <a id="title" class="navbar-brand block" (click)="goHome()">Machine Learning Portfolio</a>
-        <a id="title2" class="navbar-brand block" (click)="goHome()">Inicio</a>
+        <a id="title00" class="navbar-brand block" (click)="goHome()">Home</a>
         <div class="dropdown block">
-          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Casos</button>
+          <button id="cases" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Cases</button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" (click)="goToBlog('Bienes raíces en Ames Iowa')">Bienes raíces en Ames Iowa</a></li>
-            <li><a class="dropdown-item" (click)="goToBlog('Enfermedad Cardíaca')">Enfermedad Cardíaca</a></li> 
-            <li><a class="dropdown-item" (click)="goToBlog('Segmentación de clientes')">Segmentación de clientes</a></li> 
+            <li><a id="title1" class="dropdown-item" (click)="goToBlog('Bienes raíces en Ames Iowa')">Ames housing</a></li>
+            <li><a id="title2" class="dropdown-item" (click)="goToBlog('Enfermedad Cardíaca')">Heart disease</a></li> 
+            <li><a id="title3" class="dropdown-item" (click)="goToBlog('Segmentación de clientes')">Customer segmentation</a></li> 
           </ul>
         </div>
         <div class="dropdown block">
-          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Ejercicios</button>
+          <button id="exercises" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Exercises</button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" (click)="goToMenu('Preparación de datos')">Preparación de datos</a></li>
-            <li><a class="dropdown-item" (click)="goToMenu('Algoritmos lineales')">Algoritmos lineales</a></li>
-            <li><a class="dropdown-item" (click)="goToMenu('Algoritmos no lineales')">Algoritmos no lineales</a></li>
-            <li><a class="dropdown-item" (click)="goToMenu('No supervisado')">No supervisado</a></li>
-            <li><a class="dropdown-item" (click)="goToBlog('Ensambles')">Ensambles</a></li>
+            <li><a id="title4" class="dropdown-item" (click)="goToMenu('Preparación de datos')">Data preparation</a></li>
+            <li><a id="title5" class="dropdown-item" (click)="goToMenu('Algoritmos lineales')">Linear algorithms</a></li>
+            <li><a id="title6" class="dropdown-item" (click)="goToMenu('Algoritmos no lineales')">Non linear algorithms</a></li>
+            <li><a id="title7" class="dropdown-item" (click)="goToMenu('No supervisado')">Unsupervised</a></li>
+            <li><a id="title8" class="dropdown-item" (click)="goToBlog('Ensambles')">Ensembles</a></li>
           </ul>
         </div>
     </div>
@@ -32,12 +32,12 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <hr class="separator">
       <div id="form-container" class="d-flex">
-        <!--<a class="navbar-brand lang">English</a>
-        <a class="navbar-brand lang">Español</a>-->
+        <a class="navbar-brand lang" (click)="goToEnglish()">English</a>
+        <a class="navbar-brand lang" (click)="goToSpanish()">Español</a>
       </div>
-      <!--<hr class="separator">-->
+      <hr class="separator">
       <div id="form-container" class="d-flex">
-        <!--<p id="pipe" class="navbar-brand">|</p>-->
+        <p id="pipe" class="navbar-brand">|</p>
         <p id="myname" class="navbar-brand">Federico Becoña</p>
         <div>
           <a href="https://www.linkedin.com/in/federicobecona" target="_blank">

@@ -117,13 +117,13 @@ div{
   #title, #pipe{
     display: block;
   }
-  #title2, .separator{
+  #title00, .separator{
     display: none;
   }
 }
 
 @media (max-width: 900px) {
-  #title2, .separator{
+  #title00, .separator{
     display: block;
   }
   #title, #pipe{
@@ -151,7 +151,7 @@ div{
   margin-bottom: 2%;
 }
 
-#title2{
+#title00{
   margin-right: 10%;
 }
 

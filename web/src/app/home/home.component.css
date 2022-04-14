@@ -2,6 +2,11 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
+button{ 
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  padding: 4px;
+}
+
 #bg1{
   background-image: url(../../assets/images/ames-0.jpg);
   background-size: cover;
@@ -150,9 +155,6 @@ body {
     font-weight: 800;
   }
 
-  button{ 
-    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  }
   
   /* RESPONSIVE CSS
   -------------------------------------------------- */

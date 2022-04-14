@@ -9,23 +9,23 @@
   <div class="carousel-inner"> 
     <div id="bg1" class="carousel-item active">
         <div class="carousel-caption text-start">
-        <h4>Caso</h4>
-        <h1>Bienes raíces en Ames Iowa</h1>
-        <button class="btn btn-lg btn-primary" (click)="goToBlog('Bienes raíces en Ames Iowa')">Ver más</button>
+        <h4 class="case" >Case</h4>
+        <h1 id="case1">Ames housing</h1>
+        <button class="btn btn-lg btn-primary more" (click)="goToBlog('Bienes raíces en Ames Iowa')">Show more</button>
       </div>
     </div>
     <div id="bg2" class="carousel-item">
       <div class="carousel-caption text-start">
-        <h4>Caso</h4>
-        <h1>Enfermedad Cardíaca</h1>
-        <button class="btn btn-lg btn-primary" (click)="goToBlog('Enfermedad Cardíaca')">Ver más</button>          
+        <h4 class="case">Case</h4>
+        <h1 id="case2">Heart disease</h1>
+        <button class="btn btn-lg btn-primary more" (click)="goToBlog('Enfermedad Cardíaca')">Show more</button>          
       </div>
     </div>
     <div id="bg3" class="carousel-item">
       <div class="carousel-caption text-start">
-        <h4>Caso</h4>
-        <h1>Segmentación de clientes</h1>
-        <button class="btn btn-lg btn-primary" (click)="goToBlog('Segmentación de clientes')">Ver más</button>          
+        <h4 class="case">Case</h4>
+        <h1 id="case3">Customer segmentation</h1>
+        <button class="btn btn-lg btn-primary more" (click)="goToBlog('Segmentación de clientes')">Show more</button>          
     </div>
     </div>
   </div>
@@ -34,6 +34,7 @@
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
+
   <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
@@ -44,33 +45,33 @@
   <div class="row">
     <hr>
     <div class="col-lg-4">
-      <h4>Preparación de datos</h4>
-      <p class="menuText">Estudio de missing values, outliers, transformaciones, selección de atributos, etc.</p>
-      <p class="menuText"><button class="btn btn-primary" (click)="goToMenu('Preparación de datos')"> Ver más &raquo;</button></p>
+      <h4 id="title11">Data preparation</h4>
+      <p id="title12" class="menuText">Projects with missing values, outliers, transformations, attribute selection, etc.</p>
+      <p class="menuText"><button class="btn btn-primary more" (click)="goToMenu('Preparación de datos')"> Show more</button></p>
     </div>
     <hr class="mobile">
     <div class="col-lg-4">
-      <h4>Algoritmos lineales</h4>
-      <p class="menuText">Ejercicios con Regresión Lineal, Regresión Logística y Linear Discriminant Analysis.</p>
-      <p class="menuText"><a class="btn btn-primary" (click)="goToMenu('Algoritmos lineales')"> Ver más &raquo; </a></p>
+      <h4 id="title13">Linear algorithms</h4>
+      <p id="title14" class="menuText">Exercises with Linear Regression, Logistic Regression and Linear Discriminant Analysis.</p>
+      <p class="menuText"><button class="btn btn-primary more" (click)="goToMenu('Algoritmos lineales')"> Show more</button></p>
     </div>
     <hr class="mobile">
     <div class="col-lg-4">
-      <h4>Algoritmos no lineales</h4>
-      <p class="menuText">Problemas con Árboles de Decisión, Naive Bayes, Support Vector Machines y K-Nearest Neighbors.</p>
-      <p class="menuText"><a class="btn btn-primary"  (click)="goToMenu('Algoritmos no lineales')"> Ver más &raquo;</a></p>
+      <h4 id="title15">Non linear algorithms</h4>
+      <p id="title16" class="menuText">Problems with Decision Trees, Naive Bayes, Support Vector Machines and K-Nearest Neighbors.</p>
+      <p class="menuText"><button class="btn btn-primary more"  (click)="goToMenu('Algoritmos no lineales')"> Show more</button></p>
     </div>
     <hr class="mobile">
     <div class="col-lg-4">
-      <h4>No supervisado</h4>
-      <p class="menuText">Proyectos con métodos de clustering y Principal Component Analysis.</p>
-      <p class="menuText"><a class="btn btn-primary"  (click)="goToMenu('No supervisado')"> Ver más &raquo; </a></p>
+      <h4 id="title17">Unsupervised</h4>
+      <p id="title18" class="menuText">Studies with clustering methods and Principal Component Analysis.</p>
+      <p class="menuText"><button class="btn btn-primary more"  (click)="goToMenu('No supervisado')"> Show more</button></p>
     </div>
     <hr class="mobile">
     <div class="col-lg-4">
-      <h4>Ensambles</h4>
-      <p class="menuText">Análisis de algoritmos Bagging, Random Forest, Boosting y Ada Boost</p>
-      <p class="menuText"><a class="btn btn-primary" (click)="goToBlog('Ensambles')"> Ver más &raquo;</a></p>
+      <h4 id="title19">Ensembles</h4>
+      <p id="title110" class="menuText">Analysis of Bagging, Random Forest, Boosting and Ada Boost algorithms.</p>
+      <p class="menuText"><button class="btn btn-primary more" (click)="goToBlog('Ensambles')"> Show more</button></p>
     </div>
     <hr>
   </div>

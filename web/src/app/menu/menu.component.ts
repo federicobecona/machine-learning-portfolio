@@ -14,13 +14,13 @@ export class MenuComponent implements OnInit {
 
   title = 'json-file-read-angular';
   
-  public MenusList:{titulo:string, descripcion:string, contenido:string}[] = menus;
+  public MenusList:{titulo:string, title:string, descripcion:string, description:string, contenido:string}[] = menus;
   public DescripcionList:{unidad:string, tarea:string, descripcion:string}[] = descriptions;
 
   ngOnInit(): void {
     var i=0;
     var title: string;
-    let description;
+    let description : string;
     let content;
     var list: string | any[];
     let routeParams = this.route.snapshot.paramMap;
@@ -30,10 +30,18 @@ export class MenuComponent implements OnInit {
     let div = document.getElementById("menus")!;
     var router = this.router;
     let menu = this.MenusList.find(obj => obj.titulo === menuName);
-    title = menu?.titulo!;
-    description = menu?.descripcion!;
+    let actualURL = this.router.parseUrl(this.router.url);
+    let lang = actualURL.queryParamMap.get('lang');
+    if(lang=="en"){
+      title = menu?.title!;
+      description = menu?.description!;
+    }
+    if(lang=="es"){
+      title = menu?.titulo!;
+      description = menu?.descripcion!;
+    }
     content = menu?.contenido!;
-    titleEle.innerText = title;
+    titleEle.innerText = title!;
     titleEle.style.color = "white"
     titleEle.style.marginBottom="10px"
     titleEle.style.fontWeight = "700"
@@ -42,7 +50,7 @@ export class MenuComponent implements OnInit {
     }else{
       titleEle.style.fontSize = "xx-large"
     }
-    descriptionEle.innerText = description;
+    descriptionEle.innerText = description!;
     if (window.matchMedia("(min-width: 768px)").matches){
       descriptionEle.style.fontSize = "medium"
     }else{
@@ -54,6 +62,7 @@ export class MenuComponent implements OnInit {
       let taskTitle;
       let button;
       let taskDescription;
+      let auxDescription;
       let blogName = list[i];
       sub_div = document.createElement('div');
       sub_div.setAttribute('class', "articulo");
@@ -71,7 +80,8 @@ export class MenuComponent implements OnInit {
       }
       taskDescription = document.createElement('p');
       taskDescription.style.color = "white";
-      taskDescription.textContent = this.DescripcionList.find(desc => desc.unidad==title && desc.tarea==list[i])?.descripcion!;
+      auxDescription = this.DescripcionList.find(desc => desc.unidad== menu?.titulo! && desc.tarea==list[i])
+      taskDescription.textContent = auxDescription!.descripcion;
       taskDescription.setAttribute('align',"center");
       if (window.matchMedia("(min-width: 768px)").matches){
         taskDescription.style.fontSize = "medium"
@@ -81,7 +91,12 @@ export class MenuComponent implements OnInit {
       button = document.createElement('button');
       button.textContent = "Ver más";
       button.setAttribute('class',"btn btn-primary");
-      button.addEventListener("click", function(){router.navigate(["blog", menuName, blogName]);});
+      button.addEventListener("click", function(){
+        let actualURL = router.parseUrl(router.url);
+        let newURL = router.createUrlTree(['blog', menuName, blogName]);
+        newURL.queryParams['lang'] = actualURL.queryParamMap.get('lang');
+        router.navigateByUrl(newURL);
+      });
       sub_div.appendChild(taskTitle); 
       sub_div.appendChild(taskDescription);   
       sub_div.appendChild(button);
