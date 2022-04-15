@@ -15,7 +15,7 @@ export class MenuComponent implements OnInit {
   title = 'json-file-read-angular';
   
   public MenusList:{titulo:string, title:string, descripcion:string, description:string, contenido:string, content:string}[] = menus;
-  public DescripcionList:{unidad:string, tarea:string, descripcion:string}[] = descriptions;
+  public DescripcionList:{unidad:string, unit:string, tarea:string, task:string, descripcion:string, description:string}[] = descriptions;
 
   ngOnInit(): void {
     var i=0;
@@ -82,8 +82,16 @@ export class MenuComponent implements OnInit {
       }
       taskDescription = document.createElement('p');
       taskDescription.style.color = "white";
-      auxDescription = this.DescripcionList.find(desc => desc.unidad== menu?.titulo! && desc.tarea==list[i])
-      taskDescription.textContent = auxDescription!.descripcion;
+      
+      if(lang=="en"){
+        auxDescription = this.DescripcionList.find(desc => desc.unit== menu?.title! && desc.task==list[i])
+        taskDescription.textContent = auxDescription!.description;
+      }
+      if(lang=="es"){
+        auxDescription = this.DescripcionList.find(desc => desc.unidad== menu?.titulo! && desc.tarea==list[i])
+        taskDescription.textContent = auxDescription!.descripcion;
+      }
+      
       taskDescription.setAttribute('align',"center");
       if (window.matchMedia("(min-width: 768px)").matches){
         taskDescription.style.fontSize = "medium"
