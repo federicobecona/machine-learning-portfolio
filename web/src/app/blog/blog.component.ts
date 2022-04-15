@@ -36,7 +36,7 @@ export class BlogComponent implements OnInit {
     title = this.ArticlesList.find(obj => obj.unidad === menuName && obj.titulo === taskName)?.titulo!;
     description = this.ArticlesList.find(obj => obj.unidad === menuName && obj.titulo === taskName)?.descripcion!;
     content = this.ArticlesList.find(obj => obj.unidad === menuName && obj.titulo === taskName)?.contenido!;
-    if(menuName!="Caso"){
+    if((menuName!="Caso") && (menuName!="Case")){
       titleEle.innerText = menuName!;
       if (window.matchMedia("(min-width: 768px)").matches){
         titleEle.style.fontSize = "medium"

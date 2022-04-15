@@ -14,14 +14,14 @@ export class MenuComponent implements OnInit {
 
   title = 'json-file-read-angular';
   
-  public MenusList:{titulo:string, title:string, descripcion:string, description:string, contenido:string}[] = menus;
+  public MenusList:{titulo:string, title:string, descripcion:string, description:string, contenido:string, content:string}[] = menus;
   public DescripcionList:{unidad:string, tarea:string, descripcion:string}[] = descriptions;
 
   ngOnInit(): void {
     var i=0;
     var title: string;
     let description : string;
-    let content;
+    let auxContent : string;
     var list: string | any[];
     let routeParams = this.route.snapshot.paramMap;
     var menuName = routeParams.get('idMenu')
@@ -35,12 +35,15 @@ export class MenuComponent implements OnInit {
     if(lang=="en"){
       title = menu?.title!;
       description = menu?.description!;
+      auxContent = menu?.content!;
+      list = auxContent.split(">>").map(x => x.trim());
     }
     if(lang=="es"){
       title = menu?.titulo!;
       description = menu?.descripcion!;
+      auxContent = menu?.contenido!;
+      list = auxContent.split(">>").map(x => x.trim());
     }
-    content = menu?.contenido!;
     titleEle.innerText = title!;
     titleEle.style.color = "white"
     titleEle.style.marginBottom="10px"
@@ -56,14 +59,13 @@ export class MenuComponent implements OnInit {
     }else{
       descriptionEle.style.fontSize = "small"
     }
-    list = content.split(">>").map(x => x.trim());
-    while(i < list.length){
+    while(i < list!.length){
       let sub_div;
       let taskTitle;
       let button;
       let taskDescription;
       let auxDescription;
-      let blogName = list[i];
+      let blogName = list![i];
       sub_div = document.createElement('div');
       sub_div.setAttribute('class', "articulo");
       sub_div.style.marginTop = "15px"
@@ -71,7 +73,7 @@ export class MenuComponent implements OnInit {
       sub_div.style.padding = "18px"
       sub_div.style.border = "solid rgba(255, 255, 255, .25) thin"
       taskTitle = document.createElement('h4');
-      taskTitle.textContent = list[i];
+      taskTitle.textContent = list![i];
       taskTitle.style.color = "white";
       if (window.matchMedia("(min-width: 768px)").matches){
         taskTitle.style.fontSize = "large"
@@ -89,7 +91,12 @@ export class MenuComponent implements OnInit {
         taskDescription.style.fontSize = "small"
       }
       button = document.createElement('button');
-      button.textContent = "Ver más";
+      if(lang=="en"){
+        button.textContent = "Show more";
+      }
+      if(lang=="es"){
+        button.textContent = "Ver más";
+      }
       button.setAttribute('class',"btn btn-primary");
       button.addEventListener("click", function(){
         let actualURL = router.parseUrl(router.url);
