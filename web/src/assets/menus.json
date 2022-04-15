@@ -13,7 +13,7 @@
         "descripcion":"Ejercicios con Regresión Lineal, Regresión Logística y Linear Discriminant Analysis.",
         "description":"Exercises with Linear Regression, Logistic Regression and Linear Discriminant Analysis.",
         "contenido":"Regresión lineal simple en hoja de cálculo>>Regresión logística en planilla electrónica>>LDA en hoja de cálculo>>Titanic>>Deportes",
-        "content":"Simple Linear Regression in Spreadsheet>>Logistic Regression in Spreadsheet>>LDA in Spreadsheet>>Titanic dataset>>Sports"
+        "content":"Simple Linear Regression in spreadsheet>>Logistic Regression in spreadsheet>>LDA in spreadsheet>>Titanic dataset>>Sports"
     },
     {
         "titulo":"Algoritmos no lineales",
@@ -21,7 +21,7 @@
         "descripcion":"Problemas con Árboles de Decisión, Naive Bayes, Support Vector Machines y K-Nearest Neighbors.",
         "description":"Problems with Decision Trees, Naive Bayes, Support Vector Machines and K-Nearest Neighbors.",
         "contenido":"CART para clasificación binaria simple>>Árboles de decisión en KNIME>>Comparación de Decision Trees en herramientas de ML>>Naive Bayes en planilla electrónica>>SVM lineal con descenso de sub gradiente>>SVM no lineal en RapidMiner>>KNN en hoja de cálculo y RapidMiner",
-        "content":"CART for Simple Binary Classification>>Decision Trees in KNIME>>Comparison of Decision Trees in ML Tools>>Naive Bayes in Spreadsheet>>Linear SVM with Sub-Gradient Descent>>Nonlinear SVM in RapidMiner>>KNN in Sheet calculation and RapidMiner"
+        "content":"CART for Simple Binary Classification>>Decision Trees in KNIME>>Comparison of Decision Trees in ML Tools>>Naive Bayes in spreadsheet>>Linear SVM with Sub-Gradient Descent>>Nonlinear SVM in RapidMiner>>KNN in Sheet calculation and RapidMiner"
     },
     {
         "titulo":"No supervisado",
