@@ -15,37 +15,53 @@ export class BlogComponent implements OnInit {
 
   title = 'json-file-read-angular';
 
-  public ArticlesList:{unidad:string, titulo:string, descripcion:string, contenido:string}[] = articles;
+  public ArticlesList:{unidad:string, unit:string, titulo:string, title:string, descripcion:string, description:string, contenido:string, content:string}[] = articles;
   
   ngOnInit(): void {
     console.log(this.route.snapshot.params);
     var i=0;
-    let title;
-    let description;
-    let content;
+    let description: string;
+    let content: string;
     let list;
     let tags;
+    let sch
     let titleEle = document.getElementById("name")!;
     let subEle = document.getElementById("sub")!;
     let descriptionEle = document.getElementById("description")!;
     let div = document.getElementById("post")!;
     let routeParams = this.route.snapshot.paramMap;
     let menuName = routeParams.get('idMenu');
+    let auxMenuName = menuName;
     let taskName = routeParams.get('idBlog');
-    let lang = routeParams.get('lang');
     var router = this.router;
-    title = this.ArticlesList.find(obj => obj.unidad === menuName && obj.titulo === taskName)?.titulo!;
-    description = this.ArticlesList.find(obj => obj.unidad === menuName && obj.titulo === taskName)?.descripcion!;
-    content = this.ArticlesList.find(obj => obj.unidad === menuName && obj.titulo === taskName)?.contenido!;
+    let actualURL = this.router.parseUrl(this.router.url);
+    let lang = actualURL.queryParamMap.get('lang');
+    sch = this.ArticlesList.find(obj => obj.unidad === menuName && obj.titulo === taskName)
+    if(lang=="en"){
+      auxMenuName = sch!.unit!;
+      taskName = sch!.title!;
+      description = sch!.description!;
+      content = sch!.content!;
+    }
+    if(lang=="es"){
+      description =sch!.descripcion!;
+      content = sch!.contenido!;
+    }
     if((menuName!="Caso") && (menuName!="Case")){
-      titleEle.innerText = "menuName"!;
+      titleEle.innerText = auxMenuName!;
       if (window.matchMedia("(min-width: 768px)").matches){
         titleEle.style.fontSize = "medium"
       }else{
         titleEle.style.fontSize = "small"
       }
       titleEle.style.color = "white"
-      titleEle.addEventListener("click", function(){router.navigate(["menu", menuName]);});
+      titleEle.addEventListener("click", function(){
+        router.navigate(["menu", menuName]);
+        let actualURL = router.parseUrl(router.url);
+        let newURL = router.createUrlTree(['menu', menuName]);
+        newURL.queryParams['lang'] = actualURL.queryParamMap.get('lang');
+        router.navigateByUrl(newURL);
+      });
     }
     subEle.innerText = taskName!;
     subEle.style.color = "white"
@@ -56,13 +72,13 @@ export class BlogComponent implements OnInit {
     }else{
       subEle.style.fontSize = "x-large"
     }
-    descriptionEle.innerText = description;
+    descriptionEle.innerText = description!;
     if (window.matchMedia("(min-width: 768px)").matches){
       descriptionEle.style.fontSize = "medium"
     }else{
       descriptionEle.style.fontSize = "small"
     }
-    list = content.split("=,=");
+    list = content!.split("=,=");
     while(i < list.length){ 
       let ele;
       tags = list[i].split(">>").map(x => x.trim());

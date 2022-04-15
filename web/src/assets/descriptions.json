@@ -35,7 +35,7 @@
         "unidad":"Preparación de datos",
         "tarea":"Selección de atributos para dataset Sonar",
         "descripcion":"Ejercicio con selección de atributos en RapidMiner sobre el dataset Sonar.",
-        "unit":"Preparación de datos",
+        "unit":"Data preparation",
         "task":"Selection of attributes for Sonar dataset",
         "description":"Exercise with attribute selection in RapidMiner on the Sonar dataset."    
     },
@@ -44,7 +44,7 @@
         "tarea":"Titanic",
         "descripcion":"En este caso se hace un estudio de preparación de datos para el dataset Titanic y se crean modelos de regresión logística equivalentes para RapidMiner y SciKitLearn.",
         "unit":"Linear algorithms",
-        "task":"Titanic data",
+        "task":"Titanic dataset",
         "description":"In this case, a data preparation study is done for the Titanic dataset and equivalent logistic regression models are created for RapidMiner and SciKitLearn."
     },
     {

@@ -22,7 +22,9 @@ export class MenuComponent implements OnInit {
     var title: string;
     let description : string;
     let auxContent : string;
+    let auxContexto : string;
     var list: string | any[];
+    var lista: string | any[];
     let routeParams = this.route.snapshot.paramMap;
     var menuName = routeParams.get('idMenu')
     let titleEle = document.getElementById("name")!;
@@ -32,6 +34,8 @@ export class MenuComponent implements OnInit {
     let menu = this.MenusList.find(obj => obj.titulo === menuName);
     let actualURL = this.router.parseUrl(this.router.url);
     let lang = actualURL.queryParamMap.get('lang');
+    auxContexto = menu?.contenido!;
+    lista = auxContexto.split(">>").map(x => x.trim());
     if(lang=="en"){
       title = menu?.title!;
       description = menu?.description!;
@@ -65,7 +69,13 @@ export class MenuComponent implements OnInit {
       let button;
       let taskDescription;
       let auxDescription;
-      let blogName = list![i];
+      let blogName: any;
+      if(lang=="en"){
+        blogName = lista![i];
+      }
+      if(lang=="es"){
+        blogName = list![i];
+      }
       sub_div = document.createElement('div');
       sub_div.setAttribute('class', "articulo");
       sub_div.style.marginTop = "15px"
