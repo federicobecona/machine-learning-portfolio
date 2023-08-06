@@ -25,7 +25,7 @@ export class AppComponent {
     let lang = actualURL.queryParamMap.get('lang');
     if(lang==null){
       let newURL = this.router.createUrlTree(['home']);
-      newURL.queryParams['lang'] = 'es';
+      newURL.queryParams['lang'] = 'en';
       this.router.navigateByUrl(newURL); 
     } 
     if(lang=="en"){
@@ -73,7 +73,7 @@ export class AppComponent {
   
   setEnglish(){
     document.getElementById("title00")!.innerText = "Home";
-    document.getElementById("cases")!.innerText = "Cases";
+    document.getElementById("cases")!.innerText = "Case studies";
     document.getElementById("exercises")!.innerText = "Exercises";
     document.getElementById("title1")!.innerText = "Ames housing";
     document.getElementById("title2")!.innerText = "Heart disease";
@@ -87,7 +87,7 @@ export class AppComponent {
 
   setSpanish(){
     document.getElementById("title00")!.innerText = "Inicio";
-    document.getElementById("cases")!.innerText = "Casos";
+    document.getElementById("cases")!.innerText = "Casos de estudio";
     document.getElementById("exercises")!.innerText = "Ejercicios";
     document.getElementById("title1")!.innerText = "Bienes raíces en Ames Iowa";
     document.getElementById("title2")!.innerText = "Enfermedad Cardíaca";
