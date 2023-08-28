@@ -24,7 +24,7 @@ export class AppComponent {
     let actualURL = this.router.parseUrl(this.router.url);
     let lang = actualURL.queryParamMap.get('lang');
     if(lang==null){
-      let newURL = this.router.createUrlTree(['home']);
+      let newURL = this.router.createUrlTree(['']);
       newURL.queryParams['lang'] = 'en';
       this.router.navigateByUrl(newURL); 
     } 
