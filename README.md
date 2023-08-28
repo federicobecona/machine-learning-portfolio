@@ -1,2 +1,2 @@
 # Machine-Learning-Portfolio
-https://federicobecona.github.io/machine-learning-portfolio/
+https://federicobecona.github.io/Machine-Learning-Portfolio/
