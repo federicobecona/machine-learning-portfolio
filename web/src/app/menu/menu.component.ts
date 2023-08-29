@@ -117,7 +117,7 @@ export class MenuComponent implements OnInit {
         let actualURL = router.parseUrl(router.url);
         const sanitizedMenuName = encodeURIComponent(menuName!.toLowerCase().replace(/\s+/g, '-'));  
         const sanitizedBlogName = encodeURIComponent(blogName.toLowerCase().replace(/\s+/g, '-'));  
-        let newURL = router.createUrlTree(['blog', sanitizedMenuName, sanitizedBlogName]);
+        let newURL = router.createUrlTree([sanitizedMenuName, sanitizedBlogName]);
         newURL.queryParams['lang'] = actualURL.queryParamMap.get('lang');
         router.navigateByUrl(newURL);
       });

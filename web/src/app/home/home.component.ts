@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
   goToMenu(paramName: string): void {
     const sanitizedParamName = encodeURIComponent(paramName.toLowerCase().replace(/\s+/g, '-'));  
     let actualURL = this.router.parseUrl(this.router.url);
-    let newURL = this.router.createUrlTree(['menu', sanitizedParamName]);
+    let newURL = this.router.createUrlTree([sanitizedParamName]);
     newURL.queryParams['lang'] = actualURL.queryParamMap.get('lang');
     this.router.navigateByUrl(newURL);
   }
@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
   goToBlog(paramName:string):void{
     const sanitizedParamName = encodeURIComponent(paramName.toLowerCase().replace(/\s+/g, '-'));  
     let actualURL = this.router.parseUrl(this.router.url);
-    let newURL = this.router.createUrlTree(['blog', 'case', sanitizedParamName]);
+    let newURL = this.router.createUrlTree(['case', sanitizedParamName]);
     newURL.queryParams['lang'] = actualURL.queryParamMap.get('lang');
     this.router.navigateByUrl(newURL); 
   }

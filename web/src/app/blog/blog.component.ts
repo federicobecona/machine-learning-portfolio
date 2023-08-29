@@ -66,7 +66,7 @@ export class BlogComponent implements OnInit {
       titleEle.addEventListener("click", function(){
         router.navigate(["menu", menuName]);
         let actualURL = router.parseUrl(router.url);
-        let newURL = router.createUrlTree(['menu', menuName]);
+        let newURL = router.createUrlTree([menuName]);
         newURL.queryParams['lang'] = actualURL.queryParamMap.get('lang');
         router.navigateByUrl(newURL);
       });

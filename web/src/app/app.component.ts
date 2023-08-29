@@ -46,7 +46,7 @@ export class AppComponent {
   goToMenu(paramName: string): void {
     const sanitizedParamName = encodeURIComponent(paramName.toLowerCase().replace(/\s+/g, '-'));
     let actualURL = this.router.parseUrl(this.router.url);
-    let newURL = this.router.createUrlTree(['menu', sanitizedParamName]);
+    let newURL = this.router.createUrlTree([sanitizedParamName]);
     newURL.queryParams['lang'] = actualURL.queryParamMap.get('lang');
     this.router.navigateByUrl(newURL);
   }
@@ -54,7 +54,7 @@ export class AppComponent {
 
   goToBlog(paramName:string):void{
     let actualURL = this.router.parseUrl(this.router.url);
-    let newURL = this.router.createUrlTree(['blog', 'case', paramName]);
+    let newURL = this.router.createUrlTree(['case', paramName]);
     newURL.queryParams['lang'] = actualURL.queryParamMap.get('lang');
     this.router.navigateByUrl(newURL); 
   }

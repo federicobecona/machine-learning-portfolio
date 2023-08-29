@@ -6,8 +6,8 @@ import { BlogComponent} from './blog/blog.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
-  {path:'menu/:idMenu', component: MenuComponent},
-  {path:'blog/:idMenu/:idBlog', component: BlogComponent}
+  {path:':idMenu', component: MenuComponent},
+  {path:':idMenu/:idBlog', component: BlogComponent}
 ];
 
 @NgModule({
