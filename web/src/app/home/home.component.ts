@@ -19,22 +19,23 @@ export class HomeComponent implements OnInit {
 
   constructor(private router:Router){}
  
-  goToMenu(paramName:string):void{
+  goToMenu(paramName: string): void {
+    const sanitizedParamName = encodeURIComponent(paramName.toLowerCase().replace(/\s+/g, '-'));  
     let actualURL = this.router.parseUrl(this.router.url);
-    let newURL = this.router.createUrlTree(['menu', paramName]);
+    let newURL = this.router.createUrlTree(['menu', sanitizedParamName]);
     newURL.queryParams['lang'] = actualURL.queryParamMap.get('lang');
-    this.router.navigateByUrl(newURL); 
+    this.router.navigateByUrl(newURL);
   }
-
+  
   goToBlog(paramName:string):void{
     let actualURL = this.router.parseUrl(this.router.url);
-    let newURL = this.router.createUrlTree(['blog', 'Caso', paramName]);
+    let newURL = this.router.createUrlTree(['blog', 'case', paramName]);
     newURL.queryParams['lang'] = actualURL.queryParamMap.get('lang');
     this.router.navigateByUrl(newURL); 
   }
 
   setSpanish(){
-    document.querySelectorAll('.case').forEach(p => p.innerHTML = "Caso")
+    document.querySelectorAll('.case').forEach(p => p.innerHTML = "case")
     document.querySelectorAll('.more').forEach(p => p.innerHTML = "Ver más" )
     document.getElementById("case1")!.innerText = "Bienes raíces en Ames Iowa";
     document.getElementById("case2")!.innerText = "Enfermedad cardíaca";

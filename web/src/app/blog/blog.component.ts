@@ -36,10 +36,15 @@ export class BlogComponent implements OnInit {
     var router = this.router;
     let actualURL = this.router.parseUrl(this.router.url);
     let lang = actualURL.queryParamMap.get('lang');
-    sch = this.ArticlesList.find(obj => obj.unidad === menuName && obj.titulo === taskName)
+
+    const articlesCopy = this.ArticlesList.map(article => ({
+      ...article,
+      sanitizedUnit: encodeURIComponent(article.unit.toLowerCase().replace(/\s+/g, '-')),
+      sanitizedTitle: encodeURIComponent(article.title.toLowerCase().replace(/\s+/g, '-'))
+    }));
+    sch = articlesCopy.find(obj => obj.sanitizedUnit === menuName && obj.sanitizedTitle === taskName)
     if(lang=="en"){
       auxMenuName = sch!.unit!;
-      taskName = sch!.title!;
       description = sch!.description!;
       content = sch!.content!;
     }
@@ -47,7 +52,7 @@ export class BlogComponent implements OnInit {
       description =sch!.descripcion!;
       content = sch!.contenido!;
     }
-    if((menuName!="Caso") && (menuName!="Case")){
+    if((menuName!="caso") && (menuName!="case")){
       titleEle.innerText = auxMenuName!;
       if (window.matchMedia("(min-width: 768px)").matches){
         titleEle.style.fontSize = "medium"

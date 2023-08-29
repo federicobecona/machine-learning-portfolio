@@ -31,7 +31,11 @@ export class MenuComponent implements OnInit {
     let descriptionEle = document.getElementById("description")!;;
     let div = document.getElementById("menus")!;
     var router = this.router;
-    let menu = this.MenusList.find(obj => obj.titulo === menuName);
+    const menusCopy = this.MenusList.map(menu => { // take this logic to utils
+      const sanitizedTitle = encodeURIComponent(menu.title.toLowerCase().replace(/\s+/g, '-'));
+      return { ...menu, sanitizedTitle: sanitizedTitle };
+    });
+    let menu = menusCopy.find(obj => obj.sanitizedTitle === menuName);
     let actualURL = this.router.parseUrl(this.router.url);
     let lang = actualURL.queryParamMap.get('lang');
     auxContexto = menu?.contenido!;
@@ -70,12 +74,7 @@ export class MenuComponent implements OnInit {
       let taskDescription;
       let auxDescription;
       let blogName: any;
-      if(lang=="en"){
-        blogName = lista![i];
-      }
-      if(lang=="es"){
-        blogName = list![i];
-      }
+      blogName = list![i];
       sub_div = document.createElement('div');
       sub_div.setAttribute('class', "articulo");
       sub_div.style.marginTop = "15px"
@@ -118,7 +117,9 @@ export class MenuComponent implements OnInit {
       button.setAttribute('class',"btn btn-primary");
       button.addEventListener("click", function(){
         let actualURL = router.parseUrl(router.url);
-        let newURL = router.createUrlTree(['blog', menuName, blogName]);
+        const sanitizedMenuName = encodeURIComponent(menuName!.toLowerCase().replace(/\s+/g, '-'));  
+        const sanitizedBlogName = encodeURIComponent(blogName.toLowerCase().replace(/\s+/g, '-'));  
+        let newURL = router.createUrlTree(['blog', sanitizedMenuName, sanitizedBlogName]);
         newURL.queryParams['lang'] = actualURL.queryParamMap.get('lang');
         router.navigateByUrl(newURL);
       });
