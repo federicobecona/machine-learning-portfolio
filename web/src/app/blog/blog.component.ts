@@ -18,7 +18,6 @@ export class BlogComponent implements OnInit {
   public ArticlesList:{unidad:string, unit:string, titulo:string, title:string, descripcion:string, description:string, contenido:string, content:string}[] = articles;
   
   ngOnInit(): void {
-    console.log(this.route.snapshot.params);
     var i=0;
     let description: string;
     let content: string;
@@ -36,19 +35,23 @@ export class BlogComponent implements OnInit {
     var router = this.router;
     let actualURL = this.router.parseUrl(this.router.url);
     let lang = actualURL.queryParamMap.get('lang');
-
-    const articlesCopy = this.ArticlesList.map(article => ({
-      ...article,
-      sanitizedUnit: encodeURIComponent(article.unit.toLowerCase().replace(/\s+/g, '-')),
-      sanitizedTitle: encodeURIComponent(article.title.toLowerCase().replace(/\s+/g, '-'))
-    }));
-    sch = articlesCopy.find(obj => obj.sanitizedUnit === menuName && obj.sanitizedTitle === taskName)
+    const articlesCopy = this.ArticlesList
+      .filter(article => article && article.unit && article.title)
+      .map(article => ({
+        ...article,
+        sanitizedUnit: encodeURIComponent(article.unit.toLowerCase().replace(/\s+/g, '-')),
+        sanitizedTitle: encodeURIComponent(article.title.toLowerCase().replace(/\s+/g, '-'))
+      }));
+    sch = articlesCopy.find(obj => obj.sanitizedUnit === menuName && obj.sanitizedTitle === taskName);
     if(lang=="en"){
       auxMenuName = sch!.unit!;
+      taskName = sch!.title!;
       description = sch!.description!;
       content = sch!.content!;
     }
     if(lang=="es"){
+      auxMenuName = sch!.unidad!;
+      taskName = sch!.titulo!;
       description =sch!.descripcion!;
       content = sch!.contenido!;
     }
