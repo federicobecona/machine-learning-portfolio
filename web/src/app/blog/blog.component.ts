@@ -18,7 +18,6 @@ export class BlogComponent implements OnInit {
   public ArticlesList:{unidad:string, unit:string, titulo:string, title:string, descripcion:string, description:string, contenido:string, content:string}[] = articles;
   
   ngOnInit(): void {
-    console.log(this.route.snapshot.params);
     var i=0;
     let description: string;
     let content: string;
@@ -36,7 +35,14 @@ export class BlogComponent implements OnInit {
     var router = this.router;
     let actualURL = this.router.parseUrl(this.router.url);
     let lang = actualURL.queryParamMap.get('lang');
-    sch = this.ArticlesList.find(obj => obj.unidad === menuName && obj.titulo === taskName)
+    const articlesCopy = this.ArticlesList
+      .filter(article => article && article.unit && article.title)
+      .map(article => ({
+        ...article,
+        sanitizedUnit: encodeURIComponent(article.unit.toLowerCase().replace(/\s+/g, '-')),
+        sanitizedTitle: encodeURIComponent(article.title.toLowerCase().replace(/\s+/g, '-'))
+      }));
+    sch = articlesCopy.find(obj => obj.sanitizedUnit === menuName && obj.sanitizedTitle === taskName);
     if(lang=="en"){
       auxMenuName = sch!.unit!;
       taskName = sch!.title!;
@@ -44,10 +50,12 @@ export class BlogComponent implements OnInit {
       content = sch!.content!;
     }
     if(lang=="es"){
+      auxMenuName = sch!.unidad!;
+      taskName = sch!.titulo!;
       description =sch!.descripcion!;
       content = sch!.contenido!;
     }
-    if((menuName!="Caso") && (menuName!="Case")){
+    if((menuName!="caso") && (menuName!="case")){
       titleEle.innerText = auxMenuName!;
       if (window.matchMedia("(min-width: 768px)").matches){
         titleEle.style.fontSize = "medium"
@@ -58,7 +66,7 @@ export class BlogComponent implements OnInit {
       titleEle.addEventListener("click", function(){
         router.navigate(["menu", menuName]);
         let actualURL = router.parseUrl(router.url);
-        let newURL = router.createUrlTree(['menu', menuName]);
+        let newURL = router.createUrlTree([menuName]);
         newURL.queryParams['lang'] = actualURL.queryParamMap.get('lang');
         router.navigateByUrl(newURL);
       });

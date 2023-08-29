@@ -5,10 +5,9 @@ import { MenuComponent} from './menu/menu.component';
 import { BlogComponent} from './blog/blog.component';
 
 const routes: Routes = [
-  {path:'', redirectTo:'home', pathMatch:'full'},
-  {path:'home', component: HomeComponent},
-  {path:'menu/:idMenu', component: MenuComponent},
-  {path:'blog/:idMenu/:idBlog', component: BlogComponent}
+  {path:'', component: HomeComponent},
+  {path:':idMenu', component: MenuComponent},
+  {path:':idMenu/:idBlog', component: BlogComponent}
 ];
 
 @NgModule({

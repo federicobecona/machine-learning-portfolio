@@ -24,7 +24,7 @@ export class AppComponent {
     let actualURL = this.router.parseUrl(this.router.url);
     let lang = actualURL.queryParamMap.get('lang');
     if(lang==null){
-      let newURL = this.router.createUrlTree(['home']);
+      let newURL = this.router.createUrlTree(['']);
       newURL.queryParams['lang'] = 'en';
       this.router.navigateByUrl(newURL); 
     } 
@@ -43,16 +43,18 @@ export class AppComponent {
     this.router.navigateByUrl(newURL);
   }
 
-  goToMenu(paramName:string):void{
+  goToMenu(paramName: string): void {
+    const sanitizedParamName = encodeURIComponent(paramName.toLowerCase().replace(/\s+/g, '-'));
     let actualURL = this.router.parseUrl(this.router.url);
-    let newURL = this.router.createUrlTree(['menu', paramName]);
+    let newURL = this.router.createUrlTree([sanitizedParamName]);
     newURL.queryParams['lang'] = actualURL.queryParamMap.get('lang');
-    this.router.navigateByUrl(newURL); 
+    this.router.navigateByUrl(newURL);
   }
+  
 
   goToBlog(paramName:string):void{
     let actualURL = this.router.parseUrl(this.router.url);
-    let newURL = this.router.createUrlTree(['blog', 'Caso', paramName]);
+    let newURL = this.router.createUrlTree(['case', paramName]);
     newURL.queryParams['lang'] = actualURL.queryParamMap.get('lang');
     this.router.navigateByUrl(newURL); 
   }

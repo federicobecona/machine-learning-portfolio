@@ -31,22 +31,24 @@ export class MenuComponent implements OnInit {
     let descriptionEle = document.getElementById("description")!;;
     let div = document.getElementById("menus")!;
     var router = this.router;
-    let menu = this.MenusList.find(obj => obj.titulo === menuName);
+    const menusCopy = this.MenusList.map(menu => { // take this logic to utils
+      const sanitizedTitle = encodeURIComponent(menu.title.toLowerCase().replace(/\s+/g, '-'));
+      return { ...menu, sanitizedTitle: sanitizedTitle };
+    });
+    let menu = menusCopy.find(obj => obj.sanitizedTitle === menuName);
     let actualURL = this.router.parseUrl(this.router.url);
     let lang = actualURL.queryParamMap.get('lang');
     auxContexto = menu?.contenido!;
     lista = auxContexto.split(">>").map(x => x.trim());
+    auxContent = menu?.content!;
+    list = auxContent.split(">>").map(x => x.trim());
     if(lang=="en"){
       title = menu?.title!;
       description = menu?.description!;
-      auxContent = menu?.content!;
-      list = auxContent.split(">>").map(x => x.trim());
     }
     if(lang=="es"){
       title = menu?.titulo!;
       description = menu?.descripcion!;
-      auxContent = menu?.contenido!;
-      list = auxContent.split(">>").map(x => x.trim());
     }
     titleEle.innerText = title!;
     titleEle.style.color = "white"
@@ -63,6 +65,7 @@ export class MenuComponent implements OnInit {
     }else{
       descriptionEle.style.fontSize = "small"
     }
+    
     while(i < list!.length){
       let sub_div;
       let taskTitle;
@@ -70,12 +73,7 @@ export class MenuComponent implements OnInit {
       let taskDescription;
       let auxDescription;
       let blogName: any;
-      if(lang=="en"){
-        blogName = lista![i];
-      }
-      if(lang=="es"){
-        blogName = list![i];
-      }
+      blogName = list![i];
       sub_div = document.createElement('div');
       sub_div.setAttribute('class', "articulo");
       sub_div.style.marginTop = "15px"
@@ -93,12 +91,11 @@ export class MenuComponent implements OnInit {
       taskDescription = document.createElement('p');
       taskDescription.style.color = "white";
       
+      auxDescription = this.DescripcionList.find(desc => desc.unit== menu?.title! && desc.task==list[i])
       if(lang=="en"){
-        auxDescription = this.DescripcionList.find(desc => desc.unit== menu?.title! && desc.task==list[i])
         taskDescription.textContent = auxDescription!.description;
       }
       if(lang=="es"){
-        auxDescription = this.DescripcionList.find(desc => desc.unidad== menu?.titulo! && desc.tarea==list[i])
         taskDescription.textContent = auxDescription!.descripcion;
       }
       
@@ -118,7 +115,9 @@ export class MenuComponent implements OnInit {
       button.setAttribute('class',"btn btn-primary");
       button.addEventListener("click", function(){
         let actualURL = router.parseUrl(router.url);
-        let newURL = router.createUrlTree(['blog', menuName, blogName]);
+        const sanitizedMenuName = encodeURIComponent(menuName!.toLowerCase().replace(/\s+/g, '-'));  
+        const sanitizedBlogName = encodeURIComponent(blogName.toLowerCase().replace(/\s+/g, '-'));  
+        let newURL = router.createUrlTree([sanitizedMenuName, sanitizedBlogName]);
         newURL.queryParams['lang'] = actualURL.queryParamMap.get('lang');
         router.navigateByUrl(newURL);
       });
