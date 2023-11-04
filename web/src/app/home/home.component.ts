@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
   }
 
   setSpanish(){
-    document.querySelectorAll('.case').forEach(p => p.innerHTML = "case")
+    document.querySelectorAll('.case').forEach(p => p.innerHTML = "Caso de estudio")
     document.querySelectorAll('.more').forEach(p => p.innerHTML = "Ver más" )
     document.getElementById("case1")!.innerText = "Bienes raíces en Ames Iowa";
     document.getElementById("case2")!.innerText = "Enfermedad cardíaca";
