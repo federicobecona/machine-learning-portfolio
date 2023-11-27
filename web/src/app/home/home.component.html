@@ -1,32 +1,33 @@
 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
 
   <div class="carousel-indicators">
-    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>  
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+      aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  
-  <div class="carousel-inner"> 
+
+  <div class="carousel-inner">
     <div id="bg1" class="carousel-item active">
-        <div class="carousel-caption text-start">
-        <h4 class="case" >Study Case</h4>
+      <div class="carousel-caption text-start">
+        <h4 class="case">Case study</h4>
         <h1 id="case1">Ames housing</h1>
         <button class="btn btn-lg btn-primary more" (click)="goToBlog('ames-housing')">Show more</button>
       </div>
     </div>
     <div id="bg2" class="carousel-item">
       <div class="carousel-caption text-start">
-        <h4 class="case">Study Case</h4>
+        <h4 class="case">Case study</h4>
         <h1 id="case2">Heart disease</h1>
-        <button class="btn btn-lg btn-primary more" (click)="goToBlog('heart-disease')">Show more</button>          
+        <button class="btn btn-lg btn-primary more" (click)="goToBlog('heart-disease')">Show more</button>
       </div>
     </div>
     <div id="bg3" class="carousel-item">
       <div class="carousel-caption text-start">
-        <h4 class="case">Study Case</h4>
+        <h4 class="case">Case study</h4>
         <h1 id="case3">Customer segmentation</h1>
-        <button class="btn btn-lg btn-primary more" (click)="goToBlog('customer-segmentation')">Show more</button>          
-    </div>
+        <button class="btn btn-lg btn-primary more" (click)="goToBlog('customer-segmentation')">Show more</button>
+      </div>
     </div>
   </div>
 
@@ -46,26 +47,33 @@
     <hr>
     <div class="col-lg-4">
       <h4 id="title11">Data preparation</h4>
-      <p id="title12" class="menuText">Projects with missing values, outliers, transformations, attribute selection, etc.</p>
-      <p class="menuText"><button class="btn btn-primary more" (click)="goToMenu('data-preparation')"> Show more</button></p>
+      <p id="title12" class="menuText">Projects with missing values, outliers, transformations, attribute selection,
+        etc.</p>
+      <p class="menuText"><button class="btn btn-primary more" (click)="goToMenu('data-preparation')"> Show
+          more</button></p>
     </div>
     <hr class="mobile">
     <div class="col-lg-4">
       <h4 id="title13">Linear algorithms</h4>
-      <p id="title14" class="menuText">Exercises with Linear Regression, Logistic Regression and Linear Discriminant Analysis.</p>
-      <p class="menuText"><button class="btn btn-primary more" (click)="goToMenu('linear-algorithms')"> Show more</button></p>
+      <p id="title14" class="menuText">Exercises with Linear Regression, Logistic Regression and Linear Discriminant
+        Analysis.</p>
+      <p class="menuText"><button class="btn btn-primary more" (click)="goToMenu('linear-algorithms')"> Show
+          more</button></p>
     </div>
     <hr class="mobile">
     <div class="col-lg-4">
       <h4 id="title15">Non linear algorithms</h4>
-      <p id="title16" class="menuText">Problems with Decision Trees, Naive Bayes, Support Vector Machines and K-Nearest Neighbors.</p>
-      <p class="menuText"><button class="btn btn-primary more"  (click)="goToMenu('non-linear-algorithms')"> Show more</button></p>
+      <p id="title16" class="menuText">Problems with Decision Trees, Naive Bayes, Support Vector Machines and K-Nearest
+        Neighbors.</p>
+      <p class="menuText"><button class="btn btn-primary more" (click)="goToMenu('non-linear-algorithms')"> Show
+          more</button></p>
     </div>
     <hr class="mobile">
     <div class="col-lg-4">
       <h4 id="title17">Unsupervised</h4>
       <p id="title18" class="menuText">Studies with clustering methods and Principal Component Analysis.</p>
-      <p class="menuText"><button class="btn btn-primary more"  (click)="goToMenu('unsupervised')"> Show more</button></p>
+      <p class="menuText"><button class="btn btn-primary more" (click)="goToMenu('unsupervised')"> Show more</button>
+      </p>
     </div>
     <hr class="mobile">
     <div class="col-lg-4">
