@@ -28,6 +28,7 @@
             "assets": [
               "src/favicon.ico",
               "src/sitemap.xml",
+              "src/mysites.xml",
               "src/assets"
             ],
             "styles": [
@@ -99,6 +100,7 @@
             "assets": [
               "src/favicon.ico",
               "src/sitemap.xml",
+              "src/mysites.xml",
               "src/assets"
             ],
             "styles": [
