@@ -1,1 +1,2 @@
-Sitemap: https://federicobecona.github.io/sitemap.xml
+User-agent: *
+Disallow: /
